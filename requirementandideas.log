@@ -1,0 +1,13 @@
+How to structure the Spelling Games
+
+1. Get Spelling Words // and Player Name 
+2. Play Game
+
+	a- initiate game // use the same words ?
+	b- allow to quit
+	c- feedback for correct words
+	d- gentle correction for incorrect words
+	e- feedback when done
+	f- play again or quit
+	
+3. Keep Spelling Words

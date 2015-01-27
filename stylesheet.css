@@ -1,0 +1,113 @@
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background: #2a2a2a;
+	background-image:url("foggy forest.jpg");
+	
+	background-size:stretch;
+}
+button {
+	/* basics */
+	color: #ffffff;
+	background-color: #95A195;
+	/* rounded corners */
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-background-clip:padding; 
+	-webkit-background-clip: padding-box; background-clip: padding-box;
+	font-weight: bold;
+	margin: 5px;
+}
+
+#header {
+	padding: 10px;
+	
+	text-align: right;
+	
+}
+
+
+
+a:link, a:visited {
+	 color:#b4e391;
+	 text-decoration: none; 
+	 } 
+a:active, a:hover {
+	 color:#E9F7ED;
+	 text-decoration:none; 
+	 }
+ #menu {
+ 	background-color:#95A195;
+ 	float:right;
+ 	
+ 	text-align: right;
+ }
+ ul{
+ 	display: inline;
+ 	background-color:#95A195;
+ 	
+ 	
+ 	}
+li {
+	display:inline;
+	margin-left:60px;
+	margin-right:20px;
+	}
+	
+
+#leftColumn{	
+	position: relative;
+	width: 200px;
+    height: auto;
+	float: left;
+	margin: 5px;
+	background-color:#95A195;
+	padding:15px;
+	
+}
+#location {
+	text-align:center;
+	clear: both;
+}
+
+#contact {
+	margin: 25px;
+}
+
+iframe {
+	margin: 30px;     
+    clear: right;
+    z-index: 1;
+    
+    
+}
+
+#placeholder{
+	padding: 20px;
+}
+#game {
+    float: left;
+}
+
+#theSpellingList {
+	float: right;
+	padding-right: 25px;
+	background-color: #000000;
+}
+
+#theSpellingList:hover {
+	background-color: #95A195;
+}
+
+
+
+
+
+
+
+#listSpelling {
+	background-color: inherit;
+}
