@@ -53,8 +53,8 @@ function createList() {
 function populateSpellList() {	
 	
 	// for loop should run through spelling list array and create list items in "listSpelling"
-	var i;
-	for (i = 0; i < spellingList.length; i++ ) {
+	
+	for (var i = 0; i < spellingList.length; i++ ) {
 		
 		// create a new li
 		var newLI = document.createElement("li");
@@ -68,8 +68,7 @@ function populateSpellList() {
 		newLI.appendChild(newContent);
 		
 		// get the unordered list and add the new li
-		var displaySpellList = document.getElementById("listSpelling");
-		alert(newLI);
+		var displaySpellList = document.getElementById("listSpelling");		
 		
 		displaySpellList.appendChild(newLI);
 		
