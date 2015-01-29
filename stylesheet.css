@@ -92,10 +92,12 @@ iframe {
     float: left;
 }
 
-#theSpellingList {
+#theSpellingList  {
 	float: right;
 	padding-right: 25px;
 	background-color: #000000;
+	color: #000000;
+	display: block; 
 }
 
 #theSpellingList:hover {
@@ -103,11 +105,15 @@ iframe {
 }
 
 
-
-
-
-
-
 #listSpelling {
 	background-color: inherit;
 }
+
+#listSpelling > li {
+	background-color: inherit;
+	display: block;
+	
+}
+
+
+

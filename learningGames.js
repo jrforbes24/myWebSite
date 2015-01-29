@@ -148,12 +148,7 @@ function gameWindow(target) {
 	
 	// set the iframe html to the target html 
 	document.getElementById('game_frame').src = target;
-    // run the createName function
-	createName();
-    // run the createList function 
-	createList();
-	//play game
-	playGame(target);
+    
 	
 }
 
