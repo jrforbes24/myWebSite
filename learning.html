@@ -31,17 +31,82 @@
             <p><a href = "https://www.lds.org/general-conference/2014/10/free-forever-to-act-for-themselves?lang=eng "> Elder D. Todd Christofferson</a></p>
 		</div>
 		<div id="main">
+		
 			<h2>Learning through Games</h2>
-			<h4>Spelling</h4>
+			
             
 			<div id="game">
                 
-                <button id="missingLetters" onclick="gameWindow('MissingLetters.html')">Missing Letters</button>
-                <button id="rearrange" onclick="gameWindow('MixedUpLetters.html')">Mixed Up Letters</button>
-                <button id="audioSpelling" onclick="gameWindow('SpellItOut.html')">Spell it Out</button>
+                <button id="missingLetters" onclick=fix>Missing Letters</button>
+                <button id="rearrange" onclick=fix>Mixed Up Letters</button>
+                
+				
             </div>
+			
+			<!-- this is the section that should show the missing letters game when revealed-->
+			<div id="missingLetters2">
+			  <div class = "theSpellingList">
+			
+				<h3>The Spelling List</h3>
+				<ul class = "listSpelling">
+				   <li>test </li>
+				</ul>
+				
+			</div>
+			
+			<div class = "difficutlySelect" >
+			
+				<p>Click one of the buttons to set how hard the game is.</p>
 
-                <iframe src="iframplaceholder.html" width="600" height="400" id="game_frame"></iframe>
+				<button class = "hard" >R U Brave?</button>
+				<button class = "medium" >Normal</button>
+				<button class = "easy" >EZ</button>						   
+									   
+			</div>
+			
+						
+			<div id = "missLetterDiv" >
+				<p> Type the letters in the boxes to complete the word. </p>
+
+				<ul id="missLetterWord">
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			</div>
+			
+<!-- this is the section that should show the mixed up letters game when revealed-->
+			
+          <div id="mixupLetters">
+			  <div class = "theSpellingList">
+			
+				<h3>The Spelling List</h3>
+				<ul class = "listSpelling">
+				   <li>test </li>
+				</ul>
+				
+			</div>
+			
+			<div class = "difficutlySelect" >
+			
+				<p>Click one of the buttons to set how hard the game is.</p>
+
+				<button class = "hard" >R U Brave?</button>
+				<button class = "medium" >Normal</button>
+				<button class = "easy" >EZ</button>						   
+									   
+			</div>
+			
+						
+			<div id = "mixedupLetters" >
+				<p> Rearrange the letters in the boxes to complete the word. </p>
+
+				<ul id="mixedupLetterWord">
+					<li></li>
+					<li></li>
+				</ul>			
+			  </div>
+			</div>   
 			
 			
 		</div>

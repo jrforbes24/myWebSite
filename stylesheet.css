@@ -77,22 +77,14 @@ li {
 	margin: 25px;
 }
 
-iframe {
-	margin: 30px;     
-    clear: right;
-    z-index: 1;
-    
-    
-}
 
-#placeholder{
-	padding: 20px;
-}
+
+
 #game {
-    float: left;
+    margin: 0 auto;
 }
 
-#theSpellingList  {
+.theSpellingList  {
 	float: right;
 	padding-right: 25px;
 	background-color: #000000;
@@ -100,16 +92,16 @@ iframe {
 	display: block; 
 }
 
-#theSpellingList:hover {
+.theSpellingList:hover {
 	background-color: #95A195;
 }
 
 
-#listSpelling {
+.listSpelling {
 	background-color: inherit;
 }
 
-#listSpelling > li {
+.listSpelling > li {
 	background-color: inherit;
 	display: block;
 	
@@ -119,3 +111,11 @@ iframe {
 
 
 
+
+#missingLetters2 {
+	display: none;
+}
+
+#mixupLetters {
+	display:none;
+}
