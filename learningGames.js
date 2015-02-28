@@ -96,24 +96,9 @@ function createName() {
 		}
 	}
 
-/**
-* This will call the game function based on target.
-*
-*/
 
-function playGame(target) {	
-	"use strict";
-	// if statement to pick the game to run.
-	if(target === 'MissingLetters.html'){
-		missingLetters();
-	}
-	else if(target === 'MixedUpLetters.html'){
-		mixedUpLetters();
-	}
-	else{
-		spellItOut();
-	}	
-}
+
+
 
 /**
 *  This will run the missing letters game.
@@ -144,11 +129,34 @@ function spellItOut() {
 }
 
 
-function gameWindow(target) {
+
+
+/**
+* This will call the game function based on target.
+*
+*/
+
+function playGame(target) {
 	
-	// set the iframe html to the target html 
-	document.getElementById('game_frame').src = target;
-    
+	createName();
+	createList();
+	alert("got here");
+	
+	"use strict";
+	// if statement to pick the game to run.
+	if(target === 'MissingLetters'){
+		
+		document.getElementById("missingLetters2").style.display = block;
+		
+		missingLetters();
+		populateSpellList();
+		
+	}
+	else{
+		
+		mixedUpLetters();
+		populateSpellList();
+	}
 	
 }
 

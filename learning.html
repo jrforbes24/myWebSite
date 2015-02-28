@@ -32,19 +32,20 @@
 		</div>
 		<div id="main">
 		
-			<h2>Learning through Games</h2>
+			<h2 id="learningTitle">Learning through Games</h2>
 			
             
 			<div id="game">
                 
-                <button id="missingLetters" onclick=fix>Missing Letters</button>
-                <button id="rearrange" onclick=fix>Mixed Up Letters</button>
+                <button id="missingLetters" onclick=playGame('MissingLetters')>Missing Letters</button>
+                <button id="rearrange" onclick=playGame('MixedUpLetters')>Mixed Up Letters</button>
                 
 				
             </div>
 			
 			<!-- this is the section that should show the missing letters game when revealed-->
 			<div id="missingLetters2">
+				
 			  <div class = "theSpellingList">
 			
 				<h3>The Spelling List</h3>
@@ -52,7 +53,7 @@
 				   <li>test </li>
 				</ul>
 				
-			</div>
+			  </div>
 			
 			<div class = "difficutlySelect" >
 			
