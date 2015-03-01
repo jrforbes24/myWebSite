@@ -149,13 +149,13 @@ function playGame(target) {
 		document.getElementById("missingLetters2").style.display = block;
 		
 		missingLetters();
-		populateSpellList();
+		
 		
 	}
 	else{
 		
 		mixedUpLetters();
-		populateSpellList();
+		
 	}
 	
 }
