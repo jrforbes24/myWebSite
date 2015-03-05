@@ -50,11 +50,15 @@ function createList() {
 *
 */
 
-function populateSpellList() {	
+function populateSpellList() {
+	
+	
 	
 	// for loop should run through spelling list array and create list items in "listSpelling"
 	
 	for (var i = 0; i < spellingList.length; i++ ) {
+		
+		alert(spellingList);
 		
 		// create a new li
 		var newLI = document.createElement("li");
@@ -68,9 +72,11 @@ function populateSpellList() {
 		newLI.appendChild(newContent);
 		
 		// get the unordered list and add the new li
-		var displaySpellList = document.getElementById("listSpelling");		
+		var displaySpellList = document.getElementById("listSpelling1");		
 		
 		displaySpellList.appendChild(newLI);
+		
+		
 		
 		
 		
@@ -140,7 +146,7 @@ function playGame(target) {
 	
 	createName();
 	createList();
-	alert("got here");
+	
 	
 	"use strict";
 	// if statement to pick the game to run.

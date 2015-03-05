@@ -113,7 +113,7 @@ li {
 
 
 #missingLetters2 {
-	display: none;
+	display: block;
 }
 
 #mixupLetters {
