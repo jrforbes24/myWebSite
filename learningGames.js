@@ -58,7 +58,7 @@ function populateSpellList() {
 	
 	for (var i = 0; i < spellingList.length; i++ ) {
 		
-		alert(spellingList);
+		
 		
 		// create a new li
 		var newLI = document.createElement("li");

@@ -1,0 +1,2 @@
+Problems to fix list
+1. fix so spelling list clears before it repopulates.
