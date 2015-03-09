@@ -51,7 +51,7 @@ a:active, a:hover {
  	
  	
  	}
-li {
+#menu li {
 	display:inline;
 	margin-left:60px;
 	margin-right:20px;
@@ -86,10 +86,11 @@ li {
 
 .theSpellingList  {
 	float: right;
-	padding-right: 25px;
+	padding: 25px;
 	background-color: #000000;
 	color: #000000;
-	display: block; 
+	display: block;
+	margin: 20px;
 }
 
 .theSpellingList:hover {
@@ -97,15 +98,20 @@ li {
 }
 
 
-.listSpelling {
+#listSpelling1 {
 	background-color: inherit;
+	list-style: none;
 }
 
-.listSpelling > li {
+#listSpelling1 li {
+	
 	background-color: inherit;
 	display: block;
 	
+		
 }
+
+
 
 
 
