@@ -119,7 +119,7 @@ a:active, a:hover {
 
 
 #missingLetters2 {
-	display: block;
+	display: none;
 }
 
 #mixupLetters {

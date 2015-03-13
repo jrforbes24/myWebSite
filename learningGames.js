@@ -148,11 +148,12 @@ function playGame(target) {
 	createList();
 	
 	
+	
 	"use strict";
 	// if statement to pick the game to run.
 	if(target === 'MissingLetters'){
 		
-		document.getElementById("missingLetters2").style.display = block;
+		document.getElementById("missingLetters2").style.display = "block";
 		
 		missingLetters();
 		
