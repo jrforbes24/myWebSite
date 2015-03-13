@@ -4,7 +4,7 @@
 
 var spellingList = [];
 var yourName = null;
-
+var spellListId = null;
 
 
 
@@ -72,7 +72,8 @@ function populateSpellList() {
 		newLI.appendChild(newContent);
 		
 		// get the unordered list and add the new li
-		var displaySpellList = document.getElementById("listSpelling1");		
+		var displaySpellList = document.getElementById(spellListId);		
+		
 		
 		displaySpellList.appendChild(newLI);
 		
@@ -125,16 +126,17 @@ function mixedUpLetters() {
 	
 }
 
-/**
-*  This will run the spell it out game.
-*
-*/
-function spellItOut() {
-	// need code
+
+
+function setSpellListID(target) {
+	if(target === 'MissingLetters'){		
+		spellListId = "listSpelling1";		
+	}
+	else {
+		spellListId = "listSpelling2";	
+	}
 	
 }
-
-
 
 
 /**
@@ -144,8 +146,10 @@ function spellItOut() {
 
 function playGame(target) {
 	
+	setSpellListID(target);
 	createName();
 	createList();
+	
 	
 	
 	
@@ -162,10 +166,12 @@ function playGame(target) {
 	else{
 		
 		document.getElementById("mixupLetters").style.display = "block";
-
+			
 		mixedUpLetters();
 		
+		
 	}
+	
 	
 }
 
