@@ -129,3 +129,8 @@ a:active, a:hover {
 #learningTitle {
 	margin: 20px;
 }
+
+#listSpelling2 {	
+	background-color: inherit;
+	list-style: none;
+}

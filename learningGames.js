@@ -161,6 +161,8 @@ function playGame(target) {
 	}
 	else{
 		
+		document.getElementById("mixupLetters").style.display = "block";
+
 		mixedUpLetters();
 		
 	}
