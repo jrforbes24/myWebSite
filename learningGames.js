@@ -53,6 +53,19 @@ function createList() {
 function populateSpellList() {
 	
 	
+	var spellClear = document.getElementById(spellListId);
+	
+	// if statment to check if the spelling list has li and remove them if it does.
+	
+	
+		
+		while(spellClear.hasChildNodes()) {
+
+			spellClear.removeChild(spellClear.childNodes[0]);
+
+	}
+	
+	
 	
 	// for loop should run through spelling list array and create list items in "listSpelling"
 	
@@ -158,7 +171,7 @@ function playGame(target) {
 	if(target === 'MissingLetters'){
 		
 		document.getElementById("missingLetters2").style.display = "block";
-		
+		document.getElementById("mixupLetters").style.display = "none";
 		missingLetters();
 		
 		
@@ -166,7 +179,7 @@ function playGame(target) {
 	else{
 		
 		document.getElementById("mixupLetters").style.display = "block";
-			
+		document.getElementById("missingLetters2").style.display = "none";	
 		mixedUpLetters();
 		
 		

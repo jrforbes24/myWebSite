@@ -22,6 +22,8 @@ button {
 	margin: 5px;
 }
 
+
+
 #header {
 	padding: 10px;
 	
@@ -39,6 +41,16 @@ a:active, a:hover {
 	 color:#E9F7ED;
 	 text-decoration:none; 
 	 }
+
+.hard,
+.medium,
+.easy {
+	margin-right: 20px;
+	padding: 5px 10px;
+	border: 2px solid #95A195;
+	color: rgba(255,255,255, .7);
+}
+
  #menu {
  	background-color:#95A195;
  	float:right;
