@@ -1,6 +1,6 @@
 Things to do next list
 
-1. work on blocks for letters
-2. create a word object?
-3. work on how to decide which letters to display.
-- fix missing links
+- work on blocks for letters
+- create a word object?
+- work on how to decide which letters to display.
+
