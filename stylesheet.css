@@ -25,13 +25,9 @@ button {
 
 
 #header {
-	padding: 10px;
-	
-	text-align: right;
-	
+	padding: 10px;	
+	text-align: right;	
 }
-
-
 
 a:link, a:visited {
 	 color:#b4e391;
@@ -41,6 +37,11 @@ a:active, a:hover {
 	 color:#E9F7ED;
 	 text-decoration:none; 
 	 }
+
+.selected {
+	font-size: 1.5em;
+	font-style: italic;
+}
 
 .hard,
 .medium,
@@ -53,10 +54,10 @@ a:active, a:hover {
 
  #menu {
  	background-color:#95A195;
- 	float:right;
- 	
+ 	float:right; 	
  	text-align: right;
  }
+
  ul{
  	display: inline;
  	background-color:#95A195;
@@ -89,9 +90,6 @@ a:active, a:hover {
 	margin: 25px;
 }
 
-
-
-
 #game {
     margin: 0 auto;
 }
@@ -109,26 +107,15 @@ a:active, a:hover {
 	background-color: #95A195;
 }
 
-
 #listSpelling1 {
 	background-color: inherit;
 	list-style: none;
 }
 
-#listSpelling1 li {
-	
+#listSpelling1 li {	
 	background-color: inherit;
-	display: block;
-	
-		
+	display: block;		
 }
-
-
-
-
-
-
-
 
 #missingLetters2 {
 	display: none;
