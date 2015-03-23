@@ -4,10 +4,10 @@ body {
 	line-height: 1.5em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	background: #2a2a2a;
+	background: #95A195;
 	background-image:url("foggy forest.jpg");
-	
-	background-size:stretch;
+	background-repeat: no-repeat;
+    background-size: cover;
 }
 button {
 	/* basics */
@@ -21,6 +21,19 @@ button {
 	font-weight: bold;
 	margin: 5px;
 }
+
+footer{
+  text-align: center;
+  text-size: .75em;
+}
+
+iframe {
+  margin: 10px;
+  
+  float: right;
+}
+
+
 
 
 
@@ -88,6 +101,8 @@ a:active, a:hover {
 
 #contact {
 	margin: 25px;
+    padding: 20px;
+    float: right
 }
 
 #game {
@@ -107,6 +122,11 @@ a:active, a:hover {
 	background-color: #95A195;
 }
 
+.theSpellingList h3 {
+  background-color: #95A195;
+  display: block;
+}
+
 #listSpelling1 {
 	background-color: inherit;
 	list-style: none;
@@ -119,14 +139,17 @@ a:active, a:hover {
 
 #missingLetters2 {
 	display: none;
+    max-width: 900px;
 }
 
 #mixupLetters {
 	display:none;
+    max-width: 900px;
 }
 
 #learningTitle {
 	margin: 20px;
+    padding: 20px;
 }
 
 #listSpelling2 {	
