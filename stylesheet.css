@@ -156,3 +156,7 @@ a:active, a:hover {
 	background-color: inherit;
 	list-style: none;
 }
+
+#missLetterWord {
+  background-color: transparent;
+}

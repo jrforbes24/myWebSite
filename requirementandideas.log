@@ -8,6 +8,23 @@ How to structure the Spelling Games
 	c- feedback for correct words
 	d- gentle correction for incorrect words
 	e- feedback when done
+		- keep score
 	f- play again or quit
 	
 3. Keep Spelling Words
+
+
+For missing letters game 
+
+- take word from spelling list
+- create boxes for individual letters (so based on array length)
+- populate boxes based on difficulty (which means we need to set the difficulty)
+- allow empty boxes to be filled
+- when filled check if correct
+	- if correct mark green
+	- add points to score (base points on level of difficulty)
+	- if not correct mark red
+- check if word complete
+	- if complete clear and add new word
+- check if list done
+	- if done congratulate and ask to do again or quit
