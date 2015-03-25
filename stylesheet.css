@@ -4,10 +4,11 @@ body {
 	line-height: 1.5em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	background: #95A195;
+	
 	background-image:url("foggy forest.jpg");
 	background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
+    background-color: #95A195;
 }
 button {
 	/* basics */
@@ -28,9 +29,9 @@ footer{
 }
 
 iframe {
-  margin: 10px;
-  
+  margin: 10px;  
   float: right;
+  box-shadow: 5px 5px 10px;
 }
 
 
@@ -43,7 +44,7 @@ iframe {
 }
 
 a:link, a:visited {
-	 color:#b4e391;
+	 color:#375C1C;
 	 text-decoration: none; 
 	 } 
 a:active, a:hover {
@@ -54,6 +55,7 @@ a:active, a:hover {
 .selected {
 	font-size: 1.5em;
 	font-style: italic;
+    text-shadow: 2px 2px 5px ;
 }
 
 .hard,
@@ -66,21 +68,23 @@ a:active, a:hover {
 }
 
  #menu {
- 	background-color:#95A195;
+ 	background-image:linear-gradient(to left, #95A195, #BBC9BB );
  	float:right; 	
  	text-align: right;
+    box-shadow: 5px 5px 20px;
+    margin: 10px;
  }
 
  ul{
- 	display: inline;
- 	background-color:#95A195;
+ 	display: inline; 	
+    background-image:linear-gradient(to left, #95A195, #BBC9BB );
  	
  	
  	}
 #menu li {
 	display:inline;
 	margin-left:60px;
-	margin-right:20px;
+	margin-right:20px;     
 	}
 	
 
@@ -89,20 +93,25 @@ a:active, a:hover {
 	width: 200px;
     height: auto;
 	float: left;
-	margin: 5px;
-	background-color:#95A195;
+	margin: 10px 25px;
+	background-image:linear-gradient(to left, #95A195, #BBC9BB );
 	padding:15px;
+    box-shadow: 5px 5px 10px;
 	
 }
+
+#main {
+  padding: 20px;
+}
+
 #location {
 	text-align:center;
 	clear: both;
 }
 
 #contact {
-	margin: 25px;
-    padding: 20px;
-    float: right
+	margin: 45px;    
+    float: right;    
 }
 
 #game {
@@ -128,12 +137,12 @@ a:active, a:hover {
 }
 
 #listSpelling1 {
-	background-color: inherit;
+	background-color: transparent;
 	list-style: none;
 }
 
 #listSpelling1 li {	
-	background-color: inherit;
+	background-color: transparent;
 	display: block;		
 }
 
@@ -160,3 +169,11 @@ a:active, a:hover {
 #missLetterWord {
   background-color: transparent;
 }
+
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+
+
