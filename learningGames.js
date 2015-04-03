@@ -118,29 +118,6 @@ function createName() {
 
 
 
-
-
-/**
-*  This will run the missing letters game.
-*
-*/
-function missingLetters() {
-	// game code to create and play
-	
-
-}
-
-/**
-*  This will run the mixed up letters game.
-*
-*/
-function mixedUpLetters() {
-	// need code
-	
-}
-
-
-
 function setSpellListID(target) {
 	if(target === 'MissingLetters'){		
 		spellListId = "listSpelling1";		
@@ -152,10 +129,29 @@ function setSpellListID(target) {
 }
 
 /**
+* create object that gets word from array and makes it an object 
+* with properties like length of the word, an array of the word, a second array 
+* that we can check against the first 
+*/
+function wordLetterArray (){
+  var spellingListArrays = [];
+  for(var i =0; i < spellingList.length; i++){
+    // create new array based on word retrieved from spelling list
+    var tempWord = spellingList[i].split("");
+    spellingListArrays.push(tempWord);    
+  }
+  alert(spellingListArrays);
+}
+
+
+
+/**
  * missingLetters function containg the code to play the missing letters game
  */
 function missingLetters() {
-//  - function to get word from missing letters array
+//  - function to get word from missing letters array 
+  wordLetterArray();
+// maybe even an array of objects?? 
 //	- create a new array based on the word retrieved
 //	- variable populated with the length of the new array
 // - function to add quit button or way to get out
@@ -178,7 +174,14 @@ function missingLetters() {
   
 }
 
-
+/**
+*  This will run the mixed up letters game.
+*
+*/
+function mixedUpLetters() {
+	// need code
+	
+}
 
 
 
@@ -195,6 +198,7 @@ function playGame(target) {
 	setSpellListID(target);
 	createName();
 	createList();
+    
 	
 	
 	

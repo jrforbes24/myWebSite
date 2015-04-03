@@ -136,9 +136,15 @@ a:active, a:hover {
   display: block;
 }
 
-#listSpelling1 {
-	background-color: transparent;
+#listSpelling1 {	
 	list-style: none;
+    background-color: #000000;
+    background-image: none;
+}
+
+#listSpelling1:hover {
+  background-color: #95A195;
+  background-image: none;
 }
 
 #listSpelling1 li {	
