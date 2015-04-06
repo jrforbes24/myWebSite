@@ -3,6 +3,7 @@
  */
 
 var spellingList = [];
+var spellingListArrays = [];
 var yourName = null;
 var spellListId = null;
 
@@ -129,18 +130,30 @@ function setSpellListID(target) {
 }
 
 /**
+* Constructor function to create a word object
+* that I can call to set up various properties and arrays. 
+* Will pull in word from spellingList array
+*/
+
+var SpellWord = function(wordFromArray) {
+  this.totalLength = wordFromArray.length;
+  this.array1 = wordFromArray.split("");
+  this.array2 = wordFromArray.split("");
+}
+
+/**
 * create object that gets word from array and makes it an object 
 * with properties like length of the word, an array of the word, a second array 
 * that we can check against the first 
 */
 function wordLetterArray (){
-  var spellingListArrays = [];
+  
   for(var i =0; i < spellingList.length; i++){
-    // create new array based on word retrieved from spelling list
-    var tempWord = spellingList[i].split("");
+    // create new object based on word retrieved from spelling list
+    var tempWord = new SpellWord(spellingList[i]);
+    // add object to spellingListArrays
     spellingListArrays.push(tempWord);    
-  }
-  alert(spellingListArrays);
+  }  
 }
 
 
@@ -150,10 +163,11 @@ function wordLetterArray (){
  */
 function missingLetters() {
 //  - function to get word from missing letters array 
-  wordLetterArray();
-// maybe even an array of objects?? 
-//	- create a new array based on the word retrieved
+//  - maybe even an array of objects?? 
+//	- create 2 new arrays based on the word retrieved
 //	- variable populated with the length of the new array
+  wordLetterArray();
+
 // - function to add quit button or way to get out
 // - function to take new array and populate boxes in web page
 //	- needs to create box or element
