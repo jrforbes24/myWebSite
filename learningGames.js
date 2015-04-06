@@ -20,8 +20,14 @@ function createList() {
         var entry = prompt("Please enter your spelling words, seperated by a comma. example(word,word,word): ");
         // takes entry checks to see if it has something and creates array.
         if (entry != null && entry != "") {
-            //creates the array
-            spellingList = entry.split(",");
+            // creates temp array that can then be cleaned up 
+            var tempSpellingList = entry.split(",");
+            // this is the clean up and the push to spellingList
+            for(var i = 0; i < tempSpellingList.length; i++){
+              var tempWord = tempSpellingList[i].trim();
+              var tempWord2 = tempWord.toLowerCase();
+              spellingList.push(tempWord2);              
+            }           
 			
         }
         // let them know nothing entered and call the function again.
@@ -150,9 +156,9 @@ function wordLetterArray (){
   
   for(var i =0; i < spellingList.length; i++){
     // create new object based on word retrieved from spelling list
-    var tempWord = new SpellWord(spellingList[i]);
+    var tempWord3 = new SpellWord(spellingList[i]);
     // add object to spellingListArrays
-    spellingListArrays.push(tempWord);    
+    spellingListArrays.push(tempWord3);    
   }  
 }
 

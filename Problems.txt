@@ -1,2 +1,1 @@
-fix the weird colors on ul listspelling1
-fix so trims words before goes into spelling list array
+ - still some issue with ul background
