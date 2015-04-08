@@ -4,10 +4,10 @@ body {
 	line-height: 1.5em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;	
-	background-image: linear-gradient(to top,#95A195,transparent);            
+	background-image: linear-gradient(to top,#E3DCDD,transparent);            
 	background-repeat: no-repeat;
     background-size: 100%;
-    background-color: rgba(208,219,208, 0.5);
+    background-color: rgba(227,220,221, 0.5);
     
 }
 button {
