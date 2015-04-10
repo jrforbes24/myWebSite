@@ -151,6 +151,7 @@ var SpellWord = function(wordFromArray) {
 * create object that gets word from array and makes it an object 
 * with properties like length of the word, an array of the word, a second array 
 * that we can check against the first 
+* also pushes the object to spellingListArrays 
 */
 function wordLetterArray (){
   

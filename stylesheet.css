@@ -4,10 +4,10 @@ body {
 	line-height: 1.5em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;	
-	background-image: linear-gradient(to top,#E3DCDD,transparent);            
+	background-image: linear-gradient(to top,#D1C8A9,transparent);            
 	background-repeat: no-repeat;
     background-size: 100%;
-    background-color: rgba(227,220,221, 0.5);
+    background-color: rgba(209,200,169, 0.5);
     
 }
 button {
@@ -181,5 +181,9 @@ a:active, a:hover {
   content: "";
   display: table;
   clear: both;
+}
 
+.difficultySelect {
+  display: none;
+}
 

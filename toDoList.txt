@@ -1,6 +1,6 @@
 Things to do next list
 
 - work on blocks for letters
-- create a word object?
+
 - work on how to decide which letters to display.
 
