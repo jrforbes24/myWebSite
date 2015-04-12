@@ -163,6 +163,30 @@ function wordLetterArray (){
   }  
 }
 
+/*
+This function will take the array from the word object and add
+it to the missLetterWord id. Hopefully one letter per list item. 
+*/
+
+function populateMLWID () {
+  for(var i = 0; i < spellingListArrays[i].totalLength; i++){
+    // create a new li
+    var newLI2 = document.createElement("li");
+    var indLetter = spellingListArrays[i].array1[i];
+    
+    // create new content
+    var newContent2 = document.createTextNode(indLetter);
+    
+    // add the spelling list letter to the li
+    newLI2.appendChild(newContent2);
+    
+    // get the unordered list and add the new li
+    var displayLetter = document.getElementById("missLetterWord");
+    
+    displayLetter.appendChild(newLI2);
+  }
+}
+
 
 
 /**
@@ -174,6 +198,8 @@ function missingLetters() {
 //	- create 2 new arrays based on the word retrieved
 //	- variable populated with the length of the new array
   wordLetterArray();
+  populateMLWID ();
+  
 
 // - function to add quit button or way to get out
 // - function to take new array and populate boxes in web page
