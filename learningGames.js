@@ -169,10 +169,13 @@ it to the missLetterWord id. Hopefully one letter per list item.
 */
 
 function populateMLWID () {
-  for(var i = 0; i < spellingListArrays[i].totalLength; i++){
+  var randNum = Math.floor(Math.random()*spellingListArrays.length+1);
+  var tempArray = spellingListArrays[randNum];
+  
+  for(var i = 0; i < tempArray.length; i++){
     // create a new li
     var newLI2 = document.createElement("li");
-    var indLetter = spellingListArrays[i].array1[i];
+    var indLetter = tempArray.array1[i];
     
     // create new content
     var newContent2 = document.createTextNode(indLetter);

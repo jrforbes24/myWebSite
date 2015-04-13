@@ -1,1 +1,2 @@
  - still some issue with ul background
+ - fix the function that gets a word object and pushes it to li's 
