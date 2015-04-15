@@ -153,7 +153,7 @@ var SpellWord = function(wordFromArray) {
 * that we can check against the first 
 * also pushes the object to spellingListArrays 
 */
-function wordLetterArray (){
+function wordLetterArray(){
   
   for(var i =0; i < spellingList.length; i++){
     // create new object based on word retrieved from spelling list
@@ -168,14 +168,22 @@ This function will take the array from the word object and add
 it to the missLetterWord id. Hopefully one letter per list item. 
 */
 
-function populateMLWID () {
-  var randNum = Math.floor(Math.random()*spellingListArrays.length+1);
-  var tempArray = spellingListArrays[randNum];
+function populateMLWID() {
+  // while statement to remove any ul li's for missLetterWord  
+  var missLetterWords = document.getElementById("missLetterWord");
+  
+  while(missLetterWords.hasChildNodes()) {
+			missLetterWords.removeChild(missLetterWords.childNodes[0]);
+	}
+  
+  var randNum = Math.floor(Math.random()*spellingListArrays.length);  
+  var tempArray = spellingListArrays[randNum].array1;
+  console.log(tempArray);
   
   for(var i = 0; i < tempArray.length; i++){
     // create a new li
     var newLI2 = document.createElement("li");
-    var indLetter = tempArray.array1[i];
+    var indLetter = tempArray[i];
     
     // create new content
     var newContent2 = document.createTextNode(indLetter);
@@ -201,7 +209,7 @@ function missingLetters() {
 //	- create 2 new arrays based on the word retrieved
 //	- variable populated with the length of the new array
   wordLetterArray();
-  populateMLWID ();
+  populateMLWID();
   
 
 // - function to add quit button or way to get out

@@ -1,5 +1,4 @@
 Things to do next list
-- work on displaying a word first  in id missLetterWord  
 - then work on putting the number of boxes in list 
 - work on blocks for letters
 - work on how to decide which letters to display.
