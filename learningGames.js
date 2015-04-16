@@ -57,19 +57,14 @@ function createList() {
 *
 */
 
-function populateSpellList() {
-	
+function populateSpellList() {	
 	
 	var spellClear = document.getElementById(spellListId);
 	
-	// if statment to check if the spelling list has li and remove them if it does.
-	
-	
+	// if statment to check if the spelling list has li and remove them if it does.	
 		
 		while(spellClear.hasChildNodes()) {
-
 			spellClear.removeChild(spellClear.childNodes[0]);
-
 	}
 	
 	

@@ -4,10 +4,10 @@ body {
 	line-height: 1.5em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;	
-	background-image: linear-gradient(to top,#D1C8A9,transparent);            
+	background-image: linear-gradient(to bottom,#D1C8A9,transparent);            
 	background-repeat: no-repeat;
     background-size: 100%;
-    background-color: rgba(209,200,169, 0.5);
+    
     
 }
 button {
@@ -75,7 +75,7 @@ a:active, a:hover {
     margin: 10px;
  }
 
- ul{
+#menu ul{
  	display: inline; 	
     background-image:linear-gradient(to left, #95A195, #BBC9BB );
  	
