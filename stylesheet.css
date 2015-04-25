@@ -179,12 +179,13 @@ a:active, a:hover {
 #missLetterWord input {
   list-style: none;
   display: inline-block;
-  margin:10px;
+  margin:5px;
   padding: 15px;
-  font-size: 1.5em;
+  font-size: 2em;
   border: 2px solid black;
   background: #D1C8A9;
-  
+  max-width: 13px;
+  max-height: 10px;   
 }
 
 

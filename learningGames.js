@@ -155,7 +155,7 @@ function populateMLWID() {
     var textBox = document.createElement("input");
     textBox.type = 'text';
     // set max attribute
-    textBox.max = 1;
+    textBox.setAttribute('maxLength','1');
     // get letter from tempArray
     textBox.value = tempArray[i];  
     
