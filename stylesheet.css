@@ -199,3 +199,7 @@ a:active, a:hover {
   display: none;
 }
 
+
+#spellTitle {
+  padding: 10px;
+}
