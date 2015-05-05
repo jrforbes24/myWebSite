@@ -5,6 +5,7 @@ var spellingList = [];
 var spellingListArrays = [];
 var yourName = null;
 var spellListId = null;
+var score = 0;
 
 /**
  * This checks to see if there is already a spelling list
@@ -156,6 +157,10 @@ function populateMLWID() {
     textBox.type = 'text';
     // set max attribute
     textBox.setAttribute('maxLength','1');
+    // set name attribute
+    textBox.setAttribute('id', 'spellbox' + i);
+    // set event 
+    textBox.setAttribute('oninput', 'checkCorrect()');
     // get letter from tempArray
     textBox.value = tempArray[i];  
     
@@ -166,10 +171,23 @@ function populateMLWID() {
   }
 }
 
+/**
+this will quit the game, which means, hide the div, clear the spelling list and the name
+*/
 
+function quitGame() {
+  // todo
+}
 
 /**
- * missingLetters function containg the code to play the missing letters game
+this will check if the word is correct after user inputs something in the field 
+*/
+
+function checkCorrect() {
+  // todo
+}
+
+ /** missingLetters function containg the code to play the missing letters game
  */
 function missingLetters() {
   //  - function to get word from missing letters array 
@@ -180,7 +198,7 @@ function missingLetters() {
   populateMLWID();
 
   // - function to add quit button or way to get out
-
+  
   // - function to take new array and populate boxes in web page
   //	- needs to create box or element
   //	- add letter or add but hide based on some random ( NEED TO FIGURE THIS OUT )
