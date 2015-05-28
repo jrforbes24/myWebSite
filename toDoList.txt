@@ -1,5 +1,6 @@
 Things to do next list
 - work on how to decide which letters to display.
+- photo swipe
 
 
 

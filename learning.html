@@ -1,123 +1,136 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="stylesheet.css">
-        <script src="myWebSite.js"></script>
-        <script src="learningGames.js"></script>
-        <title>Forbes Family (main)</title>
-    </head>
-    <body>
-    	<div id="header">
-        <h2>JR Forbes Family Site Under Construction </h2>        
-        </div>
-        
-        <div id="menu">
-        	<ul>
-        		<li><a href="index.html">Home</a></li>
-        		<li><a href="gallery.html">Gallery</a></li>
-        		<li><a href="blog.html">Blog</a></li>
-        		<li><a href="exercise.html">Exercise</a></li>
-        		<li><a href="learning.html" class="selected">Learning</a></li>
-        		<li><a href="contact.html">Contact</a></li>
-        	</ul>
-        </div>
-        <div id="leftColumn">
-        	
-        	<h3>Thoughts on Learning</h3>
-	        <p>...seek learning even by study and also by faith;</p>
-	        <p><a href="https://www.lds.org/scriptures/dc-testament/dc/109.7?lang=eng#6" target="_blank">D&C 109:7</a></p>
-            <p>In matters both temporal and spiritual, the opportunity to assume personal responsibility is a God-given gift without which we cannot realize our full potential as daughters and sons of God. Personal accountability becomes both a right and a duty that we must constantly defend; it has been under assault since before the Creation. We must defend accountability against persons and programs that would (sometimes with the best of intentions) make us dependent. And we must defend it against our own inclinations to avoid the work that is required to cultivate talents, abilities, and Christlike character.</p>
-            <p><a href = "https://www.lds.org/general-conference/2014/10/free-forever-to-act-for-themselves?lang=eng "> Elder D. Todd Christofferson</a></p>
-		</div>
-		<div id="main">
-		
-			<h2 id="learningTitle">Learning through Games</h2>
-			
-            
-			<div id="game">
-                
-                <button id="missingLetters" onclick=playGame('MissingLetters')>Missing Letters</button>
-                <button id="rearrange" onclick=playGame('MixedUpLetters')>Mixed Up Letters</button>
-                
-				
-            </div>
-			
-			<!-- this is the section that should show the missing letters game when revealed-->
-			<div id="missingLetters2">
-				
-			  <div class = "theSpellingList">
-			
-				<h3 id="spellTitle">Spelling List</h3>
-				<ul id = "listSpelling1">
-				   
-				</ul>
-				
-			  </div>
-			
-			<div class = "difficultySelect" >
-			
-				<p>Click one of the links below to set how hard the game is.</p>
 
-				<a class = "hard" >R U Brave?</a>
-				<a class = "medium" >Normal</a>
-				<a class = "easy" >EZ</a>						   
-									   
-			</div>
-			
-						
-			<div id = "missLetterDiv" >
-				<p> Type the letters in the boxes to complete the word. </p>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="myWebSite.js"></script>
+  <script src="learningGames.js"></script>
+  <title>Forbes Family (main)</title>
+</head>
 
-		      <form action="learning.html" method="post" id="missLetterWord">
-                
-              
-              </form>
-			</div>
-			</div>
-			
-<!-- this is the section that should show the mixed up letters game when revealed-->
-			
-          <div id="mixupLetters">
-			  <div class = "theSpellingList">
-			
-				<h3>The Spelling List</h3>
-				<ul id = "listSpelling2">
-				   
-				</ul>
-				
-			</div>
-			
-			<div class = "difficutlySelect" >
-			
-				<p>Click one of the links below to set how hard the game is.</p>
+<body>
+  <div id="header">
+    <h2>JR Forbes Family Site Under Construction </h2>
+  </div>
 
-				<a class = "hard" >R U Brave?</a>
-				<a class = "medium" >Normal</a>
-				<a class = "easy" >EZ</a>						   
-									   
-			</div>
-			
-						
-			<div id = "mixedupLetters" >
-				<p> Rearrange the letters in the boxes to complete the word. </p>
+  <div id="menu">
+    <ul>
+      <li><a href="index.html">Home</a>
+      </li>
+      <li><a href="gallery.html">Gallery</a>
+      </li>
+      <li><a href="blog.html">Blog</a>
+      </li>
+      <li><a href="exercise.html">Exercise</a>
+      </li>
+      <li><a href="learning.html" class="selected">Learning</a>
+      </li>
+      <li><a href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div id="leftColumn">
 
-				<ul id="mixedupLetterWord">
-					<li></li>
-					<li></li>
-				</ul>			
-			  </div>
-			</div>   
-			
-			
-		</div>
-		
-		<div id="location">
-			<p>Here I am!</p>
-		</div>
-      <footer>
-			<p>&copy; John R. Forbes 2015</p>
-            <a href="contact.html"><p>Contact</p></a>
-		</footer>
-    </body>
+    <h3>Thoughts on Learning</h3>
+    <p>...seek learning even by study and also by faith;</p>
+    <p><a href="https://www.lds.org/scriptures/dc-testament/dc/109.7?lang=eng#6" target="_blank">D&C 109:7</a>
+    </p>
+    <p>In matters both temporal and spiritual, the opportunity to assume personal responsibility is a God-given gift without which we cannot realize our full potential as daughters and sons of God. Personal accountability becomes both a right and a duty that we must constantly defend; it has been under assault since before the Creation. We must defend accountability against persons and programs that would (sometimes with the best of intentions) make us dependent. And we must defend it against our own inclinations to avoid the work that is required to cultivate talents, abilities, and Christlike character.</p>
+    <p><a href="https://www.lds.org/general-conference/2014/10/free-forever-to-act-for-themselves?lang=eng "> Elder D. Todd Christofferson</a>
+    </p>
+  </div>
+  <div id="main">
+
+    <h2 id="learningTitle">Learning through Games</h2>
+
+
+    <div id="game">
+
+      <button id="missingLetters" onclick="playGame( 'MissingLetters')">Missing Letters</button>
+      <button id="rearrange" onclick="playGame( 'MixedUpLetters')">Mixed Up Letters</button>
+
+
+    </div>
+
+    <!-- this is the section that should show the missing letters game when revealed-->
+    <div id="missingLetters2">
+
+      <div class="theSpellingList">
+
+        <h3 id="spellTitle">Spelling List</h3>
+        <ul id="listSpelling1">
+
+        </ul>
+
+      </div>
+
+      <div class="difficultySelect">
+
+        <p>Click one of the links below to set how hard the game is.</p>
+
+        <a class="hard">R U Brave?</a>
+        <a class="medium">Normal</a>
+        <a class="easy">EZ</a>
+
+      </div>
+
+
+      <div id="missLetterDiv">
+        <p> Type the letters in the boxes to complete the word. </p>
+
+        <form action="learning.html" method="post" id="missLetterWord">
+
+        </form>
+        <button onclick="quitGame()">Quit</button>
+      </div>
+    </div>
+
+    <!-- this is the section that should show the mixed up letters game when revealed-->
+
+    <div id="mixupLetters">
+      <div class="theSpellingList">
+
+        <h3>The Spelling List</h3>
+        <ul id="listSpelling2">
+
+        </ul>
+
+      </div>
+
+      <div class="difficutlySelect">
+
+        <p>Click one of the links below to set how hard the game is.</p>
+
+        <a class="hard">R U Brave?</a>
+        <a class="medium">Normal</a>
+        <a class="easy">EZ</a>
+
+      </div>
+
+
+      <div id="mixedupLetters">
+        <p> Rearrange the letters in the boxes to complete the word. </p>
+
+        <ul id="mixedupLetterWord">
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="location">
+    <p>Here I am!</p>
+  </div>
+  <footer>
+    <p>&copy; John R. Forbes 2015</p>
+    <a href="contact.html">
+      <p>Contact</p>
+    </a>
+  </footer>
+</body>
+
 </html>

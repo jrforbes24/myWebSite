@@ -156,14 +156,14 @@ function populateMLWID() {
     var textBox = document.createElement("input");
     textBox.type = 'text';
     // set max attribute
-    textBox.setAttribute('maxLength','1');
+    textBox.setAttribute('maxLength', '1');
     // set name attribute
     textBox.setAttribute('id', 'spellbox' + i);
     // set event 
     textBox.setAttribute('oninput', 'checkCorrect()');
     // get letter from tempArray
-    textBox.value = tempArray[i];  
-    
+    textBox.value = tempArray[i];
+
     // get the form and add the new textBox 
     var displayLetter = document.getElementById("missLetterWord");
 
@@ -176,7 +176,8 @@ this will quit the game, which means, hide the div, clear the spelling list and 
 */
 
 function quitGame() {
-  // todo
+  // time to clean up first hide the div
+
 }
 
 /**
@@ -187,7 +188,7 @@ function checkCorrect() {
   // todo
 }
 
- /** missingLetters function containg the code to play the missing letters game
+/** missingLetters function containg the code to play the missing letters game
  */
 function missingLetters() {
   //  - function to get word from missing letters array 
@@ -198,7 +199,7 @@ function missingLetters() {
   populateMLWID();
 
   // - function to add quit button or way to get out
-  
+
   // - function to take new array and populate boxes in web page
   //	- needs to create box or element
   //	- add letter or add but hide based on some random ( NEED TO FIGURE THIS OUT )
