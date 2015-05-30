@@ -203,3 +203,10 @@ a:active, a:hover {
 #spellTitle {
   padding: 10px;
 }
+
+#imageGallery li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 15px;
+  padding: 5px;  
+}
