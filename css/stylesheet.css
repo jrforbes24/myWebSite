@@ -6,8 +6,7 @@ body {
 	font-size: 12px;	
 	background-image: linear-gradient(to bottom,#D1C8A9,transparent);            
 	background-repeat: no-repeat;
-    background-size: 100%;
-    
+    background-size: 100%; 
     
 }
 button {
@@ -27,16 +26,6 @@ footer{
   text-align: center;
   text-size: .75em;
 }
-
-iframe {
-  margin: 10px;  
-  float: right;
-  box-shadow: 5px 5px 10px;
-}
-
-
-
-
 
 #header {
 	padding: 10px;	
