@@ -37,10 +37,21 @@ $('body').append($overlay);
 $('#imageGallery a').click(function(event) {
     event.preventDefault();
     var imageLocation = $(this).attr('href');
+    // update with the image linked in the link
+    $image.attr('src', imageLocation);
+    // Show the overlay.
+    $overlay.show();
+    // Get child's alt attribute and set caption variable
+    var captionText = $(this).children('img').attr('alt');
+    $caption.text(captionText);
+});
 
-    TODO
+/*
+When everlay is clicked hide the overlay
+*/
 
-
+$overlay.click(function  () {
+    $overlay.hide();
 });
 
 
