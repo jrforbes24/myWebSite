@@ -7,46 +7,67 @@ var yourName = null;
 var spellListId = null;
 var score = 0;
 
+/*
+    various functions to clear lists
+*/
+
+/*
+    this function will clear the spelling list
+*/
+
+function clearSpellList() {
+
+    // gets the id specified in the spellListID variable 
+    var spellClear = document.getElementById(spellListId);
+
+    // if statment to check if the spelling list has li and remove them if it does. 
+
+    while (spellClear.hasChildNodes()) {
+        spellClear.removeChild(spellClear.childNodes[0]);
+    }
+
+}
+
 /**
  * This checks to see if there is already a spelling list
  * if not it creates one, if there is ask to keep or to create a new one.
  */
 function createList() {
 
-  if (spellingList.length === 0) {
-    //prompts for the list and then adds to the var entry
-    var entry = prompt("Please enter your spelling words, seperated by a comma. example(word,word,word): ");
-    // takes entry checks to see if it has something and creates array.
-    if (entry != null && entry != "") {
-      // creates temp array that can then be cleaned up 
-      var tempSpellingList = entry.split(",");
-      // this is the clean up and the push to spellingList
-      for (var i = 0; i < tempSpellingList.length; i++) {
-        var tempWord = tempSpellingList[i].trim();
-        var tempWord2 = tempWord.toLowerCase();
-        spellingList.push(tempWord2);
-      }
+    if (spellingList.length === 0) {
+        //prompts for the list and then adds to the var entry
+        var entry = prompt("Please enter your spelling words, seperated by a comma. example(word,word,word): ");
+        // takes entry checks to see if it has something and creates array.
+        if (entry != null && entry != "") {
+            // creates temp array that can then be cleaned up 
+            var tempSpellingList = entry.split(",");
+            // this is the clean up and the push to spellingList
+            for (var i = 0; i < tempSpellingList.length; i++) {
+                var tempWord = tempSpellingList[i].trim();
+                var tempWord2 = tempWord.toLowerCase();
+                spellingList.push(tempWord2);
+            }
+
+        }
+        // let them know nothing entered and call the function again.
+        else {
+            alert("you didn't enter anything!");
+            createList();
+        }
+
+    } else {
+        // keep the same list
+        if (confirm("Is this your spelling list? " + spellingList)) {
+            alert("Okay, Let's Play!!");
+        }
+        // create a new list
+        else {
+            spellingList = [];
+            createList();
+        }
 
     }
-    // let them know nothing entered and call the function again.
-    else {
-      alert("you didn't enter anything!");
-      createList();
-    }
-
-  } else {
-    // keep the same list
-    if (confirm("Is this your spelling list? " + spellingList)) {
-      alert("Okay, Let's Play!!");
-    }
-    // create a new list
-    else {
-      spellingList = [];
-      createList();
-    }
-
-  }
-  populateSpellList();
+    populateSpellList();
 }
 
 /**
@@ -56,30 +77,24 @@ function createList() {
 
 function populateSpellList() {
 
-  var spellClear = document.getElementById(spellListId);
 
-  // if statment to check if the spelling list has li and remove them if it does.	
-
-  while (spellClear.hasChildNodes()) {
-    spellClear.removeChild(spellClear.childNodes[0]);
-  }
+    clearSpellList();
 
 
+    // for loop should run through spelling list array and create list items in "listSpelling"
 
-  // for loop should run through spelling list array and create list items in "listSpelling"
-
-  for (var i = 0; i < spellingList.length; i++) {
-    // create a new li
-    var newLI = document.createElement("li");
-    var indSpellingWord = spellingList[i];
-    // grab the spelling list item 
-    var newContent = document.createTextNode(indSpellingWord);
-    // add the spelling list item to the li
-    newLI.appendChild(newContent);
-    // get the unordered list and add the new li
-    var displaySpellList = document.getElementById(spellListId);
-    displaySpellList.appendChild(newLI);
-  }
+    for (var i = 0; i < spellingList.length; i++) {
+        // create a new li
+        var newLI = document.createElement("li");
+        var indSpellingWord = spellingList[i];
+        // grab the spelling list item 
+        var newContent = document.createTextNode(indSpellingWord);
+        // add the spelling list item to the li
+        newLI.appendChild(newContent);
+        // get the unordered list and add the new li
+        var displaySpellList = document.getElementById(spellListId);
+        displaySpellList.appendChild(newLI);
+    }
 }
 
 /**
@@ -88,22 +103,22 @@ function populateSpellList() {
  */
 
 function createName() {
-  if (yourName === null) {
-    // get there name and return it. 
-    yourName = prompt("Please enter your name: ");
-  } else if (!(confirm("Is your name " + yourName + "?"))) {
-    yourName = prompt("Please enter your name: ");
-  }
+    if (yourName === null) {
+        // get there name and return it. 
+        yourName = prompt("Please enter your name: ");
+    } else if (!(confirm("Is your name " + yourName + "?"))) {
+        yourName = prompt("Please enter your name: ");
+    }
 }
 
 
 
 function setSpellListID(target) {
-  if (target === 'MissingLetters') {
-    spellListId = "listSpelling1";
-  } else {
-    spellListId = "listSpelling2";
-  }
+    if (target === 'MissingLetters') {
+        spellListId = "listSpelling1";
+    } else {
+        spellListId = "listSpelling2";
+    }
 
 }
 
@@ -113,10 +128,10 @@ function setSpellListID(target) {
  * Will pull in word from spellingList array
  */
 
-var SpellWord = function (wordFromArray) {
-  this.totalLength = wordFromArray.length;
-  this.array1 = wordFromArray.split("");
-  this.array2 = wordFromArray.split("");
+var SpellWord = function(wordFromArray) {
+    this.totalLength = wordFromArray.length;
+    this.array1 = wordFromArray.split("");
+    this.array2 = wordFromArray.split("");
 }
 
 /**
@@ -126,13 +141,27 @@ var SpellWord = function (wordFromArray) {
  * also pushes the object to spellingListArrays
  */
 function wordLetterArray() {
-  for (var i = 0; i < spellingList.length; i++) {
-    // create new object based on word retrieved from spelling list
-    var tempWord3 = new SpellWord(spellingList[i]);
-    // add object to spellingListArrays
-    spellingListArrays.push(tempWord3);
-  }
+    for (var i = 0; i < spellingList.length; i++) {
+        // create new object based on word retrieved from spelling list
+        var tempWord3 = new SpellWord(spellingList[i]);
+        // add object to spellingListArrays
+        spellingListArrays.push(tempWord3);
+    }
 }
+
+/*
+Clear the childnodes from missLetterWord 
+*/
+
+function removeInputFields() {
+    // while statement to remove any childnodes for missLetterWord  
+    var missLetterWords = document.getElementById("missLetterWord");
+
+    while (missLetterWords.hasChildNodes()) {
+        missLetterWords.removeChild(missLetterWords.childNodes[0]);
+    }
+}
+
 
 /*
 This function will take the array from the word object and add
@@ -140,81 +169,79 @@ it to the missLetterWord id. Hopefully one letter per list item.
 */
 
 function populateMLWID() {
-  // while statement to remove any ul li's for missLetterWord  
-  var missLetterWords = document.getElementById("missLetterWord");
 
-  while (missLetterWords.hasChildNodes()) {
-    missLetterWords.removeChild(missLetterWords.childNodes[0]);
-  }
+    removeInputFields();
+    $('#missLetterDiv').show();
 
-  var randNum = Math.floor(Math.random() * spellingListArrays.length);
-  var tempArray = spellingListArrays[randNum].array1;
+    var randNum = Math.floor(Math.random() * spellingListArrays.length);
+    var tempArray = spellingListArrays[randNum].array1;
 
 
-  for (var i = 0; i < tempArray.length; i++) {
-    // create a new textbox
-    var textBox = document.createElement("input");
-    textBox.type = 'text';
-    // set max attribute
-    textBox.setAttribute('maxLength', '1');
-    // set name attribute
-    textBox.setAttribute('id', 'spellbox' + i);
-    // set event 
-    textBox.setAttribute('oninput', 'checkCorrect()');
-    // get letter from tempArray
-    textBox.value = tempArray[i];
+    for (var i = 0; i < tempArray.length; i++) {
+        // create a new textbox
+        var textBox = document.createElement("input");
+        textBox.type = 'text';
+        // set max attribute
+        textBox.setAttribute('maxLength', '1');
+        // set name attribute
+        textBox.setAttribute('id', 'spellbox' + i);
+        // set event 
+        textBox.setAttribute('oninput', 'checkCorrect()');
+        // get letter from tempArray
+        textBox.value = tempArray[i];
 
-    // get the form and add the new textBox 
-    var displayLetter = document.getElementById("missLetterWord");
+        // get the form and add the new textBox 
+        var displayLetter = document.getElementById("missLetterWord");
 
-    displayLetter.appendChild(textBox);
-  }
+        displayLetter.appendChild(textBox);
+    }
 }
 
 /**
 this will quit the game, which means, hide the div, clear the spelling list and the name
 */
 
-function quitGame() {
-  // time to clean up first hide the div
-
-}
+$('.quit').click(function() {
+    clearSpellList();
+    removeInputFields();
+    $(this).parent().hide();
+})
 
 /**
 this will check if the word is correct after user inputs something in the field 
 */
 
 function checkCorrect() {
-  // todo
+    // todo
 }
 
 /** missingLetters function containg the code to play the missing letters game
  */
 function missingLetters() {
-  //  - function to get word from missing letters array 
-  //  - maybe even an array of objects?? 
-  //	- create 2 new arrays based on the word retrieved
-  //	- variable populated with the length of the new array
-  wordLetterArray();
-  populateMLWID();
+    //  - function to get word from missing letters array 
+    //  - maybe even an array of objects?? 
+    //	- create 2 new arrays based on the word retrieved
+    //	- variable populated with the length of the new array
+    wordLetterArray();
+    populateMLWID();
 
-  // - function to add quit button or way to get out
+    // - function to add quit button or way to get out
 
-  // - function to take new array and populate boxes in web page
-  //	- needs to create box or element
-  //	- add letter or add but hide based on some random ( NEED TO FIGURE THIS OUT )
-  //	- FIGURE OUT HOW TO LET SOME BOXES BE EDITED AND OTHERS NOT. 
-  // - Need an event to determine if something has been entered in the box and then check it.
-  //	- function to check if it matches the hidden value
-  //		- if match change letter to green and add to score
-  //		- if does not match change letter to red and move cursor back to it.
-  //	- function to then check if word is complete
-  //		- if complete
-  //			- check if list complete
-  //				- if complete congratulate screen with score ask to do it again
-  //				- list not complete generate next word
-  //		- not complete 
-  //			- move cursor to next non complete letter
+    // - function to take new array and populate boxes in web page
+    //	- needs to create box or element
+    //	- add letter or add but hide based on some random ( NEED TO FIGURE THIS OUT )
+    //	- FIGURE OUT HOW TO LET SOME BOXES BE EDITED AND OTHERS NOT. 
+    // - Need an event to determine if something has been entered in the box and then check it.
+    //	- function to check if it matches the hidden value
+    //		- if match change letter to green and add to score
+    //		- if does not match change letter to red and move cursor back to it.
+    //	- function to then check if word is complete
+    //		- if complete
+    //			- check if list complete
+    //				- if complete congratulate screen with score ask to do it again
+    //				- list not complete generate next word
+    //		- not complete 
+    //			- move cursor to next non complete letter
 
 
 }
@@ -224,7 +251,7 @@ function missingLetters() {
  *
  */
 function mixedUpLetters() {
-  // need code
+    // need code
 
 }
 
@@ -240,31 +267,31 @@ function mixedUpLetters() {
 
 function playGame(target) {
 
-  setSpellListID(target);
-  createName();
-  createList();
+    setSpellListID(target);
+    createName();
+    createList();
 
 
 
 
 
-  "use strict";
-  // if statement to pick the game to run.
-  if (target === 'MissingLetters') {
+    "use strict";
+    // if statement to pick the game to run.
+    if (target === 'MissingLetters') {
 
-    document.getElementById("missingLetters2").style.display = "block";
-    document.getElementById("mixupLetters").style.display = "none";
-    missingLetters();
-
-
-  } else {
-
-    document.getElementById("mixupLetters").style.display = "block";
-    document.getElementById("missingLetters2").style.display = "none";
-    mixedUpLetters();
+        document.getElementById("missingLetters2").style.display = "block";
+        document.getElementById("mixupLetters").style.display = "none";
+        missingLetters();
 
 
-  }
+    } else {
+
+        document.getElementById("mixupLetters").style.display = "block";
+        document.getElementById("missingLetters2").style.display = "none";
+        mixedUpLetters();
+
+
+    }
 
 
 }
