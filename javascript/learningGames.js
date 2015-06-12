@@ -200,7 +200,7 @@ function populateMLWID() {
 /**
 this will quit the game, which means, hide the div, clear the spelling list and the name
 */
-
+// - function to add quit button or way to get out
 $('.quit').click(function() {
     clearSpellList();
     removeInputFields();
@@ -225,7 +225,7 @@ function missingLetters() {
     wordLetterArray();
     populateMLWID();
 
-    // - function to add quit button or way to get out
+    
 
     // - function to take new array and populate boxes in web page
     //	- needs to create box or element
@@ -295,3 +295,4 @@ function playGame(target) {
 
 
 }
+
