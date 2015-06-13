@@ -150,7 +150,7 @@ function wordLetterArray() {
 }
 
 /*
-Clear the childnodes from missLetterWord 
+Clear the childnodes from missLetterWord unordered list 
 */
 
 function removeInputFields() {
@@ -175,6 +175,8 @@ function populateMLWID() {
 
     var randNum = Math.floor(Math.random() * spellingListArrays.length);
     var tempArray = spellingListArrays[randNum].array1;
+
+
 
 
     for (var i = 0; i < tempArray.length; i++) {
