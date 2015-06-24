@@ -3,6 +3,7 @@
  */
 var spellingList = [];
 var spellingListArrays = [];
+var usedSpellingListObject = [];
 var yourName = null;
 var spellListId = null;
 var score = 0;
@@ -169,16 +170,43 @@ it to the missLetterWord id. Hopefully one letter per list item.
 */
 
 function populateMLWID() {
-
+    // this removes and fields that may be there already
     removeInputFields();
+    // show the id missLetterDiv
     $('#missLetterDiv').show();
-
+    // this creates a randum number based on the length of the spelling list
+    // then it grabs an array of one of the words and stores in variable 
     var randNum = Math.floor(Math.random() * spellingListArrays.length);
     var tempArray = spellingListArrays[randNum].array1;
+    
+    // need to pop that word from the spellingListArrays so that it is not used again
+    // and move it to another list at the end and then check against the end array
+    usedSpellingListObject.push(spellingListArrays[randNum]);
+    spellingListArrays.splice(randNum, 1);
+    // take temp array get length divide and round down for the number of letters to replace in array 
+    // with blanks
+    var totNum2Remove = parseInt((tempArray.length)/2);
+    // this will take the total number of letters to remove and remove them at random locations.
+    while(totNum2Remove > 0) {
+        // get the index location for the removal of the letter
+        var tempNun = Math.floor(Math.random() * tempArray.length);
+        
+        // this will take tempNun and replace that location in array with blank
+        if (tempArray[tempNun] !== "") {
+            
+            tempArray.splice(tempNun, 1, "");
+            totNum2Remove -= 1;
+        };
 
 
+        
+    }
+    
+    
 
+    // need to get the length of the array of the word
 
+    // create form elements and populate with a letter from array 
     for (var i = 0; i < tempArray.length; i++) {
         // create a new textbox
         var textBox = document.createElement("input");
