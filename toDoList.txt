@@ -1,5 +1,4 @@
 Things to do next list
-- work on how to decide which letters to display.
 - lock input fields that have something in them
 - change tab order to go to first blank and then so on 
 

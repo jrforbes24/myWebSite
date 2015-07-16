@@ -190,24 +190,22 @@ function populateMLWID() {
     while(totNum2Remove > 0) {
         // get the index location for the removal of the letter
         var tempNun = Math.floor(Math.random() * tempArray.length);
-        
+        // console.log(tempNun);
         // this will take tempNun and replace that location in array with blank
-        if (tempArray[tempNun] !== "") {
-            
+        if (tempArray[tempNun] !== "") {            
             tempArray.splice(tempNun, 1, "");
+            // console.log(tempArray);
             totNum2Remove -= 1;
         };
-
-
         
-    }
-    
+    } 
     
 
     // need to get the length of the array of the word
 
     // create form elements and populate with a letter from array 
     for (var i = 0; i < tempArray.length; i++) {
+        console.log(tempArray);
         // create a new textbox
         var textBox = document.createElement("input");
         textBox.type = 'text';
@@ -218,7 +216,8 @@ function populateMLWID() {
         // set event 
         textBox.setAttribute('oninput', 'checkCorrect()');
         // get letter from tempArray
-        textBox.value = tempArray[i];
+        console.log(tempArray[i]);
+        textBox.setAttribute('value', tempArray[i]);
 
         // get the form and add the new textBox 
         var displayLetter = document.getElementById("missLetterWord");
