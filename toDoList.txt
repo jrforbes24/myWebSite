@@ -1,8 +1,6 @@
 Things to do next list
-- lock input fields that have something in them
-- change tab order to go to first blank and then so on 
-
-
-
-
-
+- remove exercise page
+- develop blog page to hold and play videos
+- lock web page with security or signon system
+- set up logging on that 
+- change tab order to go to first blank and then so on

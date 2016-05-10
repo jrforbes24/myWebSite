@@ -3,11 +3,11 @@ body {
 	padding: 0;
 	line-height: 1.5em;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;	
-	background-image: linear-gradient(to bottom,#D1C8A9,transparent);            
+	font-size: 12px;
+	background-image: linear-gradient(to bottom,#D1C8A9,transparent);
 	background-repeat: no-repeat;
-    background-size: 100%; 
-    
+    background-size: 100%;
+
 }
 button {
 	/* basics */
@@ -16,7 +16,7 @@ button {
 	/* rounded corners */
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
-	-moz-background-clip:padding; 
+	-moz-background-clip:padding;
 	-webkit-background-clip: padding-box; background-clip: padding-box;
 	font-weight: bold;
 	margin: 5px;
@@ -28,17 +28,17 @@ footer{
 }
 
 #header {
-	padding: 10px;	
-	text-align: right;	
+	padding: 10px;
+	text-align: right;
 }
 
 a:link, a:visited {
 	 color:#375C1C;
-	 text-decoration: none; 
-	 } 
+	 text-decoration: none;
+	 }
 a:active, a:hover {
 	 color:#E9F7ED;
-	 text-decoration:none; 
+	 text-decoration:none;
 	 }
 
 .selected {
@@ -58,26 +58,26 @@ a:active, a:hover {
 
  #menu {
  	background-image:linear-gradient(to left, #95A195, #BBC9BB );
- 	float:right; 	
+ 	float:right;
  	text-align: right;
     box-shadow: 5px 5px 20px;
     margin: 10px;
  }
 
 #menu ul{
- 	display: inline; 	
+ 	display: inline;
     background-image:linear-gradient(to left, #95A195, #BBC9BB );
- 	
- 	
+
+
  	}
 #menu li {
 	display:inline;
 	margin-left:60px;
-	margin-right:20px;     
+	margin-right:20px;
 	}
-	
 
-#leftColumn{	
+
+#leftColumn{
 	position: relative;
 	width: 200px;
     height: auto;
@@ -86,7 +86,7 @@ a:active, a:hover {
 	background-image:linear-gradient(to left, #95A195, #BBC9BB );
 	padding:15px;
     box-shadow: 5px 5px 10px;
-	
+
 }
 
 #main {
@@ -99,8 +99,8 @@ a:active, a:hover {
 }
 
 #contact {
-	margin: 45px;    
-    float: right;    
+	margin: 45px;
+    float: right;
 }
 
 #game {
@@ -125,7 +125,7 @@ a:active, a:hover {
   display: block;
 }
 
-#listSpelling1 {	
+#listSpelling1 {
 	list-style: none;
     background-color: #000000;
     background-image: none;
@@ -136,9 +136,9 @@ a:active, a:hover {
   background-image: none;
 }
 
-#listSpelling1 li {	
+#listSpelling1 li {
 	background-color: transparent;
-	display: block;		
+	display: block;
 }
 
 #missingLetters2 {
@@ -156,7 +156,7 @@ a:active, a:hover {
     padding: 20px;
 }
 
-#listSpelling2 {	
+#listSpelling2 {
 	background-color: inherit;
 	list-style: none;
 }
@@ -174,7 +174,7 @@ a:active, a:hover {
   border: 2px solid black;
   background: #D1C8A9;
   max-width: 20px;
-  max-height: 20px;   
+  max-height: 20px;
 }
 
 
@@ -197,7 +197,7 @@ a:active, a:hover {
   list-style-type: none;
   display: inline-block;
   margin: 15px;
-  padding: 5px;  
+  padding: 5px;
 }
 
 #overlay {
@@ -222,4 +222,9 @@ a:active, a:hover {
 	font-size: 1.5em;
 }
 
+#blogpost {
+	margin: 10%;
+	padding: 5%;
+	background-image:linear-gradient(to left, #95A195, #BBC9BB );
 
+}
