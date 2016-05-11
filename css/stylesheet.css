@@ -222,7 +222,7 @@ a:active, a:hover {
 	font-size: 1.5em;
 }
 
-#blogpost {
+.blogpost {
 	margin: 10%;
 	padding: 5%;
 	background-image:linear-gradient(to left, #95A195, #BBC9BB );
