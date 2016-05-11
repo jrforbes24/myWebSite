@@ -1,6 +1,7 @@
 Things to do next list
-- remove exercise page
+- get a good video from my web camera
+- figure out how to edit videos
 - develop blog page to hold and play videos
 - lock web page with security or signon system
-- set up logging on that 
+- set up logging on that
 - change tab order to go to first blank and then so on
