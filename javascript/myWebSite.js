@@ -1,7 +1,8 @@
+/*
 function displayLocation(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    
+
     var div = document.getElementById("location");
     div.innerHTML = "You are at latitude "+ latitude + ", longitude"+ longitude;
    }
@@ -14,8 +15,9 @@ function getMyLocation() {
     else {
         alert("Sorry GeoLocation is not supported");
     }
-    
+
 }
+*/
 
 /*
 Creating a lightbox for the gallery page
@@ -58,5 +60,3 @@ $overlay.click(function  () {
 
 
 window.onload = getMyLocation;
-
-
