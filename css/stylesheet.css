@@ -25,6 +25,7 @@ button {
 footer{
   text-align: center;
   text-size: .75em;
+	clear: both;
 }
 
 #header {
