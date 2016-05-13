@@ -36,7 +36,7 @@ $('body').append($overlay);
 // capture the click event on a link to an image and display the light
 // box
 
-$('#imageGallery a').click(function(event) {
+$('.imagegallery a').click(function(event) {
     event.preventDefault();
     var imageLocation = $(this).attr('href');
     // update with the image linked in the link

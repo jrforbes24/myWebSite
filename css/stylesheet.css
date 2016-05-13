@@ -28,6 +28,10 @@ footer{
 	clear: both;
 }
 
+li {
+	list-style-type: none;
+}
+
 #header {
 	padding: 10px;
 	text-align: right;
@@ -194,11 +198,12 @@ a:active, a:hover {
   padding: 10px;
 }
 
-#imageGallery li {
+.imagegallery li {
   list-style-type: none;
   display: inline-block;
   margin: 15px;
   padding: 5px;
+
 }
 
 #overlay {
