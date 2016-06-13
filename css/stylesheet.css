@@ -232,5 +232,7 @@ a:active, a:hover {
 	margin: 3%;
 	padding: 3%;
 	background-image:linear-gradient(to left, #95A195, #BBC9BB );
+	clear: right;
+	
 
 }
