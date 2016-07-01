@@ -56,7 +56,10 @@ $overlay.click(function  () {
     $overlay.hide();
 });
 
-
-
+$(document).ready(function(){
+    $(".blogTitle").click(function(){
+        $(".blogTitle .blogpost:first-child").toggle('slow');
+    });
+});
 
 window.onload = getMyLocation;

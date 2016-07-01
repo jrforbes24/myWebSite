@@ -233,6 +233,5 @@ a:active, a:hover {
 	padding: 3%;
 	background-image:linear-gradient(to left, #95A195, #BBC9BB );
 	clear: right;
-	
-
+	display: none;
 }
