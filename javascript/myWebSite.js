@@ -58,7 +58,7 @@ $overlay.click(function  () {
 
 $(document).ready(function(){
     $(".blogTitle").click(function(){
-        $(".blogTitle .blogpost:first-child").toggle('slow');
+        $(this).next("div").toggle('slow');
     });
 });
 
