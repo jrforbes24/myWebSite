@@ -215,6 +215,8 @@ a:active, a:hover {
 	left: 0;
 	display: none;
 	text-align: center;
+	margin-top: 10%;
+	padding-bottom: 10%
 }
 
 #overlay img {
@@ -238,6 +240,7 @@ a:active, a:hover {
 
 #jrfblog {
 	clear:right;
+	margin-top: 10%;
 }
 
 .blogTitle {
