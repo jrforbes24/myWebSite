@@ -159,7 +159,6 @@ function populateMLWID() {
     // then it grabs an array of one of the words and stores in variable
     var randNum = Math.floor(Math.random() * spellingListArrays.length);
     var tempArray = spellingListArrays[randNum].array1;
-
     // need to pop that word from the spellingListArrays so that it is not used again
     // and move it to another list at the end and then check against the end array
     usedSpellingListObject.push(spellingListArrays[randNum]);
@@ -178,10 +177,7 @@ function populateMLWID() {
             // console.log(tempArray);
             totNum2Remove -= 1;
         };
-
     }
-
-
     // need to get the length of the array of the word
     // create form elements and populate with a letter from array
     for (var i = 0; i < tempArray.length; i++) {
@@ -194,14 +190,13 @@ function populateMLWID() {
         // set name attribute
         textBox.setAttribute('id', 'spellbox' + i);
         // set event
-        textBox.setAttribute('oninput', 'checkCorrect()');
+        textBox.setAttribute('onchange', 'checkCorrect(this.value)');
         // get letter from tempArray
         console.log(tempArray[i]);
         textBox.setAttribute('value', tempArray[i]);
 
         // get the form and add the new textBox
         var displayLetter = document.getElementById("missLetterWord");
-
         displayLetter.appendChild(textBox);
     }
 }
@@ -219,8 +214,9 @@ $('.quit').click(function() {
 /**
 this will check if the word is correct after user inputs something in the field
 */
-function checkCorrect() {
-    // todo
+function checkCorrect(letter) {
+    // first validate there is data in there.
+    alert(letter);
 }
 
 

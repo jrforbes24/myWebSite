@@ -5,3 +5,4 @@ Things to do next list
 - lock web page with security or sign on system
 - set up logging on that
 - change tab order to go to first blank and then so on
+- fix being able to backspace to delete all letters
