@@ -1,5 +1,4 @@
 Things to do next list
-- change blog posts to collapse
 - get a good video from my web camera
 - figure out how to edit videos
 - develop blog page to hold and play videos

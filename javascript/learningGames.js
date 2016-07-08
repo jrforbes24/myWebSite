@@ -17,16 +17,12 @@ var score = 0;
 */
 
 function clearSpellList() {
-
     // gets the id specified in the spellListID variable
     var spellClear = document.getElementById(spellListId);
-
     // if statment to check if the spelling list has li and remove them if it does.
-
     while (spellClear.hasChildNodes()) {
         spellClear.removeChild(spellClear.childNodes[0]);
     }
-
 }
 
 /**
@@ -34,7 +30,6 @@ function clearSpellList() {
  * if not it creates one, if there is ask to keep or to create a new one.
  */
 function createList() {
-
     if (spellingList.length === 0) {
         //prompts for the list and then adds to the var entry
         var entry = prompt("Please enter your spelling words, seperated by a comma. example(word,word,word): ");
@@ -48,14 +43,12 @@ function createList() {
                 var tempWord2 = tempWord.toLowerCase();
                 spellingList.push(tempWord2);
             }
-
         }
         // let them know nothing entered and call the function again.
         else {
             alert("you didn't enter anything!");
             createList();
         }
-
     } else {
         // keep the same list
         if (confirm("Is this your spelling list? " + spellingList)) {
@@ -66,7 +59,6 @@ function createList() {
             spellingList = [];
             createList();
         }
-
     }
     populateSpellList();
 }
@@ -75,15 +67,9 @@ function createList() {
  * This will take spelling list array and populate the spelling     list on screen.
  *
  */
-
 function populateSpellList() {
-
-
     clearSpellList();
-
-
     // for loop should run through spelling list array and create list items in "listSpelling"
-
     for (var i = 0; i < spellingList.length; i++) {
         // create a new li
         var newLI = document.createElement("li");
@@ -102,7 +88,6 @@ function populateSpellList() {
  * This will add a value to the yourName variable
  *
  */
-
 function createName() {
     if (yourName === null) {
         // get there name and return it.
@@ -111,7 +96,6 @@ function createName() {
         yourName = prompt("Please enter your name: ");
     }
 }
-
 
 
 function setSpellListID(target) {
@@ -128,7 +112,6 @@ function setSpellListID(target) {
  * that I can call to set up various properties and arrays.
  * Will pull in word from spellingList array
  */
-
 var SpellWord = function(wordFromArray) {
     this.totalLength = wordFromArray.length;
     this.array1 = wordFromArray.split("");
@@ -153,7 +136,6 @@ function wordLetterArray() {
 /*
 Clear the childnodes from missLetterWord unordered list
 */
-
 function removeInputFields() {
     // while statement to remove any childnodes for missLetterWord
     var missLetterWords = document.getElementById("missLetterWord");
@@ -168,7 +150,6 @@ function removeInputFields() {
 This function will take the array from the word object and add
 it to the missLetterWord id. Hopefully one letter per list item.
 */
-
 function populateMLWID() {
     // this removes and fields that may be there already
     removeInputFields();
@@ -202,7 +183,6 @@ function populateMLWID() {
 
 
     // need to get the length of the array of the word
-
     // create form elements and populate with a letter from array
     for (var i = 0; i < tempArray.length; i++) {
         console.log(tempArray);
@@ -239,10 +219,10 @@ $('.quit').click(function() {
 /**
 this will check if the word is correct after user inputs something in the field
 */
-
 function checkCorrect() {
     // todo
 }
+
 
 /** missingLetters function containg the code to play the missing letters game
  */

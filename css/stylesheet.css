@@ -241,6 +241,9 @@ a:active, a:hover {
 #jrfblog {
 	clear:right;
 	margin-top: 10%;
+	margin-left: 20%;
+	padding-left: 20%;
+
 }
 
 .blogTitle {
