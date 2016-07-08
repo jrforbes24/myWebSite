@@ -247,8 +247,6 @@ function missingLetters() {
     //				- list not complete generate next word
     //		- not complete
     //			- move cursor to next non complete letter
-
-
 }
 
 /**
@@ -256,14 +254,8 @@ function missingLetters() {
  *
  */
 function mixedUpLetters() {
-    // need code
-
+      // need code
 }
-
-
-
-
-
 
 /**
  * This will call the game function based on target.
@@ -271,32 +263,18 @@ function mixedUpLetters() {
  */
 
 function playGame(target) {
-
     setSpellListID(target);
     createName();
     createList();
-
-
-
-
-
     "use strict";
     // if statement to pick the game to run.
     if (target === 'MissingLetters') {
-
         document.getElementById("missingLetters2").style.display = "block";
         document.getElementById("mixupLetters").style.display = "none";
         missingLetters();
-
-
     } else {
-
         document.getElementById("mixupLetters").style.display = "block";
         document.getElementById("missingLetters2").style.display = "none";
         mixedUpLetters();
-
-
     }
-
-
 }
