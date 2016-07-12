@@ -190,7 +190,7 @@ function populateMLWID() {
         // set name attribute
         textBox.setAttribute('id', 'spellbox' + i);
         // set event
-        textBox.setAttribute('onchange', 'checkCorrect(this.value)');
+        textBox.setAttribute('onchange', 'checkCorrect(this.value, this.id)');
         // get letter from tempArray
         console.log(tempArray[i]);
         textBox.setAttribute('value', tempArray[i]);
@@ -214,9 +214,9 @@ $('.quit').click(function() {
 /**
 this will check if the word is correct after user inputs something in the field
 */
-function checkCorrect(letter) {
+function checkCorrect(letter, the_id) {
     // first validate there is data in there.
-    alert(letter);
+    alert(usedSpellingListObject[0].array2);
 }
 
 
