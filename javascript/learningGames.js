@@ -215,8 +215,18 @@ $('.quit').click(function() {
 this will check if the word is correct after user inputs something in the field
 */
 function checkCorrect(letter, the_id) {
-    // first validate there is data in there.
-    alert(usedSpellingListObject[0].array2);
+    // regex to check to make sure letter is an alpha
+    var re = /^[A-Za-z]+$/;
+    if(!re.test(letter)){
+      alert('Please enter a letter.');
+      document.getElementById(the_id).value = '';
+      document.getElementById(the_id).focus();
+    }
+    else{
+      // TODO 
+    }
+
+    //alert(usedSpellingListObject[0].array2);
 }
 
 
