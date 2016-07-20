@@ -215,18 +215,28 @@ $('.quit').click(function() {
 this will check if the word is correct after user inputs something in the field
 */
 function checkCorrect(letter, the_id) {
-    // regex to check to make sure letter is an alpha
-    var re = /^[A-Za-z]+$/;
-    if(!re.test(letter)){
-      alert('Please enter a letter.');
-      document.getElementById(the_id).value = '';
-      document.getElementById(the_id).focus();
-    }
-    else{
-      // TODO 
-    }
+  // change the_id to integer I can use for array location.
+  var the_spot = parseInt(the_id.slice(-1));
+  alert(the_spot);
+  // regex to check to make sure letter is an alpha
+  var re = /^[A-Za-z]+$/;
+  if(!re.test(letter)){
+    alert('Please enter a letter.');
+    // reset to blank if not a letter
+    document.getElementById(the_id).value = '';
+    // set focus to the the current id
+    document.getElementById(the_id).focus();
+  }
+  // check to see if letter is correct and in the correct location
+  else if (letter != usedSpellingListObject[0].array2[the_spot]) {
+    // color the letter red
+    var color_letter = document.getElementById(the_id).innerHTML;
+    color_letter.setAttribute('color','#F50707');
+  }
+  else {
 
-    //alert(usedSpellingListObject[0].array2);
+  }
+  //alert(usedSpellingListObject[0].array2[the_spot]);
 }
 
 
