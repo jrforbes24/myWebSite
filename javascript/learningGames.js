@@ -217,7 +217,6 @@ this will check if the word is correct after user inputs something in the field
 function checkCorrect(letter, the_id) {
   // change the_id to integer I can use for array location.
   var the_spot = parseInt(the_id.slice(-1));
-  alert(the_spot);
   // regex to check to make sure letter is an alpha
   var re = /^[A-Za-z]+$/;
   if(!re.test(letter)){
@@ -230,8 +229,10 @@ function checkCorrect(letter, the_id) {
   // check to see if letter is correct and in the correct location
   else if (letter != usedSpellingListObject[0].array2[the_spot]) {
     // color the letter red
-    var color_letter = document.getElementById(the_id).innerHTML;
-    color_letter.setAttribute('color','#F50707');
+    var color_letter = document.getElementById(the_id);
+    var the_letter = document.getElementById(the_id).value;
+    color_letter.style.color = '#F50707'
+    document.getElementById(the_id).value = the_letter;
   }
   else {
 
