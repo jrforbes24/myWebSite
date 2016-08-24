@@ -181,7 +181,7 @@ function populateMLWID() {
     // need to get the length of the array of the word
     // create form elements and populate with a letter from array
     for (var i = 0; i < tempArray.length; i++) {
-        console.log(tempArray);
+        // console.log(tempArray);
         // create a new textbox
         var textBox = document.createElement("input");
         textBox.type = 'text';
@@ -192,7 +192,7 @@ function populateMLWID() {
         // set event
         textBox.setAttribute('onchange', 'checkCorrect(this.value, this.id)');
         // get letter from tempArray
-        console.log(tempArray[i]);
+        // console.log(tempArray[i]);
         textBox.setAttribute('value', tempArray[i]);
 
         // get the form and add the new textBox
@@ -235,9 +235,16 @@ function checkCorrect(letter, the_id) {
     document.getElementById(the_id).value = the_letter;
   }
   else {
+    // color the letter green
+    var color_letter = document.getElementById(the_id);
+    var the_letter = document.getElementById(the_id).value;
+    color_letter.style.color = '#193B0D'
+    document.getElementById(the_id).value = the_letter;
+    // add letter to array1
+
 
   }
-  //alert(usedSpellingListObject[0].array2[the_spot]);
+  alert(usedSpellingListObject[0].array1);
 }
 
 
