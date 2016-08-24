@@ -241,6 +241,7 @@ function checkCorrect(letter, the_id) {
     color_letter.style.color = '#193B0D'
     document.getElementById(the_id).value = the_letter;
     // add letter to array1
+    usedSpellingListObject[0].array1.splice(the_spot, 1, the_letter);
 
 
   }
