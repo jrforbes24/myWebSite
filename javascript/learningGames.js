@@ -8,14 +8,10 @@ var yourName = null;
 var spellListId = null;
 var score = 0;
 
-/*
-    various functions to clear lists
-*/
 
 /*
     this function will clear the spelling list
 */
-
 function clearSpellList() {
     // gets the id specified in the spellListID variable
     var spellClear = document.getElementById(spellListId);
@@ -64,7 +60,7 @@ function createList() {
 }
 
 /**
- * This will take spelling list array and populate the spelling     list on screen.
+ * This will take spelling list array and populate the spelling list on screen.
  *
  */
 function populateSpellList() {
@@ -163,7 +159,7 @@ function populateMLWID() {
     // and move it to another list at the end and then check against the end array
     usedSpellingListObject.push(spellingListArrays[randNum]);
     spellingListArrays.splice(randNum, 1);
-    // take temp array get length divide and round down for the number of letters to replace in array
+    // take temp array get length divide and round down for the number of letters to ?? replace in array
     // with blanks
     var totNum2Remove = parseInt((tempArray.length)/2);
     // this will take the total number of letters to remove and remove them at random locations.
@@ -194,7 +190,6 @@ function populateMLWID() {
         // get letter from tempArray
         // console.log(tempArray[i]);
         textBox.setAttribute('value', tempArray[i]);
-
         // get the form and add the new textBox
         var displayLetter = document.getElementById("missLetterWord");
         displayLetter.appendChild(textBox);
@@ -204,7 +199,6 @@ function populateMLWID() {
 /**
 this will quit the game, which means, hide the div, clear the spelling list and the name
 */
-// - function to add quit button or way to get out
 $('.quit').click(function() {
     clearSpellList();
     removeInputFields();
@@ -242,11 +236,22 @@ function checkCorrect(letter, the_id) {
     document.getElementById(the_id).value = the_letter;
     // add letter to array1
     usedSpellingListObject[0].array1.splice(the_spot, 1, the_letter);
-
-
   }
-  alert(usedSpellingListObject[0].array1);
+  // array1 and array2 match then
+  if(usedSpellingListObject[0].array1 == usedSpellingListObject[0].array2){
+    // add point to score
+    score += 1;
+    // clear word from spelling list
+    // TODO:
+    // check to see if spelling list empty and end game
+    // clear boxes and add new word
+    removeInputFields()
+  }
+
 }
+
+alert(usedSpellingListObject[0].array1);
+alert(usedSpellingListObject[0].array2);
 
 
 /** missingLetters function containg the code to play the missing letters game
@@ -261,12 +266,8 @@ function missingLetters() {
 
 
 
-    // - function to take new array and populate boxes in web page
-    //	- needs to create box or element
-    //	- add letter or add but hide based on some random ( NEED TO FIGURE THIS OUT )
-    //	- FIGURE OUT HOW TO LET SOME BOXES BE EDITED AND OTHERS NOT.
-    // - Need an event to determine if something has been entered in the box and then check it.
-    //	- function to check if it matches the hidden value
+
+
     //		- if match change letter to green and add to score
     //		- if does not match change letter to red and move cursor back to it.
     //	- function to then check if word is complete
