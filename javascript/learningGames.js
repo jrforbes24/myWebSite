@@ -237,21 +237,25 @@ function checkCorrect(letter, the_id) {
     // add letter to array1
     usedSpellingListObject[0].array1.splice(the_spot, 1, the_letter);
   }
+  var is_same = (usedSpellingListObject[0].array1.length == usedSpellingListObject[0].array2.length) && usedSpellingListObject[0].array1.every(function(element, index) {
+    return element === usedSpellingListObject[0].array2[index];
+    });
+  alert(is_same);
+
   // array1 and array2 match then
-  if(usedSpellingListObject[0].array1 == usedSpellingListObject[0].array2){
+  if(is_same){
     // add point to score
     score += 1;
     // clear word from spelling list
     // TODO:
     // check to see if spelling list empty and end game
     // clear boxes and add new word
-    removeInputFields()
+    removeInputFields();
   }
 
 }
 
-alert(usedSpellingListObject[0].array1);
-alert(usedSpellingListObject[0].array2);
+
 
 
 /** missingLetters function containg the code to play the missing letters game
