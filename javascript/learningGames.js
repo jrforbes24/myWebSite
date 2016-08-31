@@ -240,17 +240,24 @@ function checkCorrect(letter, the_id) {
   var is_same = (usedSpellingListObject[0].array1.length == usedSpellingListObject[0].array2.length) && usedSpellingListObject[0].array1.every(function(element, index) {
     return element === usedSpellingListObject[0].array2[index];
     });
-  alert(is_same);
-
   // array1 and array2 match then
   if(is_same){
     // add point to score
     score += 1;
-    // clear word from spelling list
-    // TODO:
+    // clear word from spelling list and rewrite spelling list
+    var word_2_clear = usedSpellingListObject[0].array1.join([separator ='']);
+    var index_pos = spellingList.indexOf(word_2_clear);
+    spellingList.splice(index_pos, 1);
+    populateSpellList();
     // check to see if spelling list empty and end game
+    if(spellingList.length === 0){
+        clearSpellList();
+        removeInputFields();
+        document.getElementById('missingLetters2').style.display = 'none';
+    }
     // clear boxes and add new word
     removeInputFields();
+
   }
 
 }

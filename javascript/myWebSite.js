@@ -62,4 +62,4 @@ $(document).ready(function(){
     });
 });
 
-window.onload = getMyLocation;
+  // window.onload = getMyLocation;
