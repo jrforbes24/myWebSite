@@ -256,7 +256,7 @@ function checkCorrect(letter, the_id) {
         document.getElementById('missingLetters2').style.display = 'none';
     }
     // clear boxes and add new word
-    removeInputFields();
+    populateMLWID();
 
   }
 
