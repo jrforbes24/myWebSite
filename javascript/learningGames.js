@@ -15,7 +15,7 @@ var score = 0;
 function clearSpellList() {
     // gets the id specified in the spellListID variable
     var spellClear = document.getElementById(spellListId);
-    // if statment to check if the spelling list has li and remove them if it does.
+    // while loop to check if the spelling list has li and remove them if it does.
     while (spellClear.hasChildNodes()) {
         spellClear.removeChild(spellClear.childNodes[0]);
     }
@@ -246,6 +246,8 @@ function checkCorrect(letter, the_id) {
     score += 1;
     // clear word from spelling list and rewrite spelling list
     var word_2_clear = usedSpellingListObject[0].array1.join([separator ='']);
+    // remove the spelling word from the used so checks will work 
+    usedSpellingListObject.shift();
     var index_pos = spellingList.indexOf(word_2_clear);
     spellingList.splice(index_pos, 1);
     populateSpellList();
