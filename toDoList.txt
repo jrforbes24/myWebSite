@@ -1,9 +1,4 @@
 Things to do next list
-
-- get a good video from my web camera
-- figure out how to edit videos
-- develop blog page to hold and play videos
 - lock web page with security or sign on system
 - set up logging on that
-- change tab order to go to first blank and then so on
 - fix being able to backspace to delete all letters

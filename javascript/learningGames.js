@@ -191,6 +191,9 @@ function populateMLWID() {
         // console.log(tempArray[i]);
         textBox.setAttribute('value', tempArray[i]);
         // get the form and add the new textBox
+        if(textBox.value === ''){
+          textBox.setAttribute('tabindex', '10');
+        }
         var displayLetter = document.getElementById("missLetterWord");
         displayLetter.appendChild(textBox);
     }
@@ -246,7 +249,7 @@ function checkCorrect(letter, the_id) {
     score += 1;
     // clear word from spelling list and rewrite spelling list
     var word_2_clear = usedSpellingListObject[0].array1.join([separator ='']);
-    // remove the spelling word from the used so checks will work 
+    // remove the spelling word from the used so checks will work
     usedSpellingListObject.shift();
     var index_pos = spellingList.indexOf(word_2_clear);
     spellingList.splice(index_pos, 1);
