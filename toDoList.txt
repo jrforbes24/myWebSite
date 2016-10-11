@@ -1,4 +1,6 @@
 Things to do next list
+- Add score
 - lock web page with security or sign on system
 - set up logging on that
 - fix being able to backspace to delete all letters
+- fix color on contact link

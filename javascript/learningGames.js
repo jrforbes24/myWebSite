@@ -8,11 +8,22 @@ var yourName = null;
 var spellListId = null;
 var score = 0;
 
+/*
+  add to the score
+*/
+function update_score(num){
+  the_num = num.toString();
+  var theScore = "Score = " + the_num;
+  document.getElementById("the_score").innerHTML = theScore;
+}
+
+
 
 /*
     this function will clear the spelling list
 */
 function clearSpellList() {
+  score = 0;
     // gets the id specified in the spellListID variable
     var spellClear = document.getElementById(spellListId);
     // while loop to check if the spelling list has li and remove them if it does.
@@ -206,6 +217,7 @@ $('.quit').click(function() {
     clearSpellList();
     removeInputFields();
     $(this).parent().hide();
+    update_score(0);
 })
 
 /**
@@ -239,14 +251,15 @@ function checkCorrect(letter, the_id) {
     document.getElementById(the_id).value = the_letter;
     // add letter to array1
     usedSpellingListObject[0].array1.splice(the_spot, 1, the_letter);
+    // add point to score
+    score += 1;
+    update_score(score);
   }
   var is_same = (usedSpellingListObject[0].array1.length == usedSpellingListObject[0].array2.length) && usedSpellingListObject[0].array1.every(function(element, index) {
     return element === usedSpellingListObject[0].array2[index];
     });
   // array1 and array2 match then
   if(is_same){
-    // add point to score
-    score += 1;
     // clear word from spelling list and rewrite spelling list
     var word_2_clear = usedSpellingListObject[0].array1.join([separator ='']);
     // remove the spelling word from the used so checks will work
