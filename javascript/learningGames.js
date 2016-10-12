@@ -23,7 +23,6 @@ function update_score(num){
     this function will clear the spelling list
 */
 function clearSpellList() {
-  score = 0;
     // gets the id specified in the spellListID variable
     var spellClear = document.getElementById(spellListId);
     // while loop to check if the spelling list has li and remove them if it does.
@@ -217,7 +216,8 @@ $('.quit').click(function() {
     clearSpellList();
     removeInputFields();
     $(this).parent().hide();
-    update_score(0);
+    score = 0;
+    update_score(score);
 })
 
 /**
@@ -272,6 +272,8 @@ function checkCorrect(letter, the_id) {
         clearSpellList();
         removeInputFields();
         document.getElementById('missingLetters2').style.display = 'none';
+        score = 0;
+        update_score(score);
     }
     // clear boxes and add new word
     populateMLWID();
