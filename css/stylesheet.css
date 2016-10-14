@@ -168,6 +168,10 @@ a:active, a:hover {
 	transition: display 5s;
 }
 
+#win_game p {
+	text-shadow: 5px 5px #5e5f60;
+}
+
 #listSpelling2 {
 	background-color: inherit;
 	list-style: none;

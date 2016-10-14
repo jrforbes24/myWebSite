@@ -22,9 +22,8 @@ function update_score(num){
 */
 
 function show_winner(){
-    var winner = document.getElementById('win_game');
-    winner.style.display = 'block';
-    $('#win_game').fadeOut(5000);
+    $('#win_game').fadeIn(2000);
+    $('#win_game').fadeOut(3000);
 }
 
 /*
