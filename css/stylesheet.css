@@ -146,7 +146,7 @@ a:active, a:hover {
 	display: block;
 }
 
-#missingLetters2 {
+#2 {
 	display: none;
     max-width: 900px;
 }
@@ -159,6 +159,13 @@ a:active, a:hover {
 #learningTitle {
 	margin: 20px;
     padding: 20px;
+}
+
+#win_game {
+	display:none;
+	font-size: 6em;
+	color: #0cb729;
+	transition: display 5s;
 }
 
 #listSpelling2 {
@@ -180,6 +187,10 @@ a:active, a:hover {
   background: #D1C8A9;
   max-width: 20px;
   max-height: 20px;
+}
+
+#missLetterDiv {
+	display: none;
 }
 
 

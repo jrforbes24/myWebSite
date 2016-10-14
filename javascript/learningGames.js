@@ -17,7 +17,15 @@ function update_score(num){
   document.getElementById("the_score").innerHTML = theScore;
 }
 
+/*
+    show winner div and then fadeout
+*/
 
+function show_winner(){
+    var winner = document.getElementById('win_game');
+    winner.style.display = 'block';
+    $('#win_game').fadeOut(5000);
+}
 
 /*
     this function will clear the spelling list
@@ -274,6 +282,8 @@ function checkCorrect(letter, the_id) {
         document.getElementById('missingLetters2').style.display = 'none';
         score = 0;
         update_score(score);
+        show_winner();
+
     }
     // clear boxes and add new word
     populateMLWID();
