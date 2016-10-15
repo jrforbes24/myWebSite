@@ -21,7 +21,14 @@ function update_score(num){
     show winner div and then fadeout
 */
 
-function show_winner(){
+function show_winner(num){
+    var final_score = num;
+    var p = document.createElement('p');
+    p.style.fontSize = "25px";
+    p.style.textShadow ='2px 2px #5e5f60';
+    var w_game = document.getElementById('win_game');
+    p.innerHTML = "Your score was " + final_score;
+    w_game.appendChild(p);
     $('#win_game').fadeIn(2000);
     $('#win_game').fadeOut(3000);
 }
@@ -279,9 +286,9 @@ function checkCorrect(letter, the_id) {
         clearSpellList();
         removeInputFields();
         document.getElementById('missingLetters2').style.display = 'none';
+        show_winner(score);
         score = 0;
         update_score(score);
-        show_winner();
 
     }
     // clear boxes and add new word
