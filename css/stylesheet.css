@@ -273,3 +273,8 @@ a:active, a:hover {
 .blogTitle:hover {
 	color: black;
 }
+
+#show_score {
+	font-size: 0.5em;
+	text-shadow: none;
+}

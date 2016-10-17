@@ -24,8 +24,8 @@ function update_score(num){
 function show_winner(num){
     var final_score = num;
     var p = document.createElement('p');
-    p.style.fontSize = "25px";
-    p.style.textShadow ='2px 2px #5e5f60';
+    p.setAttribute('id', 'show_score');    
+    p.style.textShadow ='none';
     var w_game = document.getElementById('win_game');
     p.innerHTML = "Your score was " + final_score;
     w_game.appendChild(p);
