@@ -24,13 +24,16 @@ function update_score(num){
 function show_winner(num){
     var final_score = num;
     var p = document.createElement('p');
-    p.setAttribute('id', 'show_score');    
+    p.setAttribute('id', 'show_score');
     p.style.textShadow ='none';
     var w_game = document.getElementById('win_game');
     p.innerHTML = "Your score was " + final_score;
     w_game.appendChild(p);
     $('#win_game').fadeIn(2000);
-    $('#win_game').fadeOut(3000);
+    $('#win_game').fadeOut(3000, function(){
+        $('#show_score').remove();
+    });
+    
 }
 
 /*
