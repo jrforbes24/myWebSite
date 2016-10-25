@@ -33,7 +33,7 @@ function show_winner(num){
     $('#win_game').fadeOut(3000, function(){
         $('#show_score').remove();
     });
-    
+
 }
 
 /*
@@ -220,6 +220,9 @@ function populateMLWID() {
         // get the form and add the new textBox
         if(textBox.value === ''){
           textBox.setAttribute('tabindex', '10');
+        }
+        else {
+            textBox.setAttribute('disabled', 'disabled');
         }
         var displayLetter = document.getElementById("missLetterWord");
         displayLetter.appendChild(textBox);

@@ -1,4 +1,4 @@
 Things to do next list
-- lock web page with security or sign on system
-- set up logging on that
-- fix being able to backspace to delete all letters
+- Mixed up letters 
+- lock web page with security or sign on system // I can do this with s3 when I am ready
+- set up logging on that // s3 also
