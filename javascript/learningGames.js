@@ -22,17 +22,17 @@ function update_score(num){
 */
 
 function show_winner(num){
-    var final_score = num;
-    var p = document.createElement('p');
-    p.setAttribute('id', 'show_score');
-    p.style.textShadow ='none';
-    var w_game = document.getElementById('win_game');
-    p.innerHTML = "Your score was " + final_score;
-    w_game.appendChild(p);
-    $('#win_game').fadeIn(2000);
-    $('#win_game').fadeOut(3000, function(){
-        $('#show_score').remove();
-    });
+  var final_score = num;
+  var p = document.createElement('p');
+  p.setAttribute('id', 'show_score');
+  p.style.textShadow = 'none';
+  var w_game = document.getElementById('win_game');
+  p.innerHTML = "Your score was " + final_score;
+  w_game.appendChild(p);
+  $('#win_game').fadeIn(2000);
+  $('#win_game').fadeOut(3000, function(){
+      $('#show_score').remove();
+  });
 
 }
 
@@ -40,9 +40,9 @@ function show_winner(num){
     this function will clear the spelling list
 */
 function clearSpellList() {
-    // gets the id specified in the spellListID variable
-    var spellClear = document.getElementById(spellListId);
-    // while loop to check if the spelling list has li and remove them if it does.
+  // gets the id specified in the spellListID variable
+  var spellClear = document.getElementById(spellListId);
+  // while loop to check if the spelling list has li and remove them if it does.
     while (spellClear.hasChildNodes()) {
         spellClear.removeChild(spellClear.childNodes[0]);
     }
@@ -310,26 +310,9 @@ function checkCorrect(letter, the_id) {
 /** missingLetters function containg the code to play the missing letters game
  */
 function missingLetters() {
-    //  - function to get word from missing letters array
-    //  - maybe even an array of objects??
-    //	- create 2 new arrays based on the word retrieved
-    //	- variable populated with the length of the new array
+    // function to get word from missing letters array
     wordLetterArray();
     populateMLWID();
-
-
-
-
-
-    //		- if match change letter to green and add to score
-    //		- if does not match change letter to red and move cursor back to it.
-    //	- function to then check if word is complete
-    //		- if complete
-    //			- check if list complete
-    //				- if complete congratulate screen with score ask to do it again
-    //				- list not complete generate next word
-    //		- not complete
-    //			- move cursor to next non complete letter
 }
 
 /**
@@ -337,7 +320,9 @@ function missingLetters() {
  *
  */
 function mixedUpLetters() {
-      // need code
+      // function to add word objects to arrays
+      wordLetterArray();
+      
 }
 
 /**
