@@ -48,6 +48,29 @@ function clearSpellList() {
     }
 }
 
+/*
+This will shuffle an array for mixed up letters game
+*/
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 /**
  * This checks to see if there is already a spelling list
  * if not it creates one, if there is ask to keep or to create a new one.
@@ -86,9 +109,8 @@ function createList() {
     populateSpellList();
 }
 
-/**
- * This will take spelling list array and populate the spelling list on screen.
- *
+/*
+ This will take spelling list array and populate the spelling list on screen.
  */
 function populateSpellList() {
     clearSpellList();
@@ -322,7 +344,11 @@ function missingLetters() {
 function mixedUpLetters() {
       // function to add word objects to arrays
       wordLetterArray();
-      
+      myArray = [1,2,3,4,5,6,7];
+      shuffle(myArray);
+      alert(myArray);
+
+
 }
 
 /**
