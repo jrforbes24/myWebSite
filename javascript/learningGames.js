@@ -327,8 +327,6 @@ function checkCorrect(letter, the_id) {
 }
 
 
-
-
 /** missingLetters function containg the code to play the missing letters game
  */
 function missingLetters() {
@@ -344,8 +342,19 @@ function missingLetters() {
 function mixedUpLetters() {
       // function to add word objects to arrays
       wordLetterArray();
-      myArray = [1,2,3,4,5,6,7];
+      // need to shuffle a speling word array objects
+      var myArray = spellingListArrays[0].array1;
       shuffle(myArray);
+      // need to add to li and write to screen
+      // need to make ul sortable
+      // need to check to see if correct once moved
+      // need to keep score
+      // show winner and score when done
+      // need quit function
+      // need to make sure can't change li's
+
+
+      
       alert(myArray);
 
 
