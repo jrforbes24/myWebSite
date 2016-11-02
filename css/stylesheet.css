@@ -201,6 +201,22 @@ footer a p:hover {
 	display: none;
 }
 
+#mixupLetters input {
+	list-style: none;
+  display: inline-block;
+  margin:5px;
+  padding: 10px;
+  font-size: 2em;
+  border: 2px solid black;
+  background: #D1C8A9;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+input:disabled {
+	color: black;
+}
+
 
 .group:after {
   content: "";

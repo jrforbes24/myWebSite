@@ -343,16 +343,37 @@ function mixedUpLetters() {
       // function to add word objects to arrays
       wordLetterArray();
       // need to shuffle a speling word array objects
-      var myArray = spellingListArrays[0].array1;
+      var randNum2 = Math.floor(Math.random() * spellingListArrays.length);
+      var myArray = spellingListArrays[randNum2].array1;
       shuffle(myArray);
       // need to add to li and write to screen
+      for (var i = 0; i < myArray.length; i++) {
+          // console.log(myArray);
+          // create a new textbox
+          var textBox = document.createElement("input");
+          textBox.type = 'text';
+          // set max attribute
+          textBox.setAttribute('maxLength', '1');
+          // set name attribute
+          textBox.setAttribute('id', 'spellbox' + i);
+          // set event
+          // TODO textBox.setAttribute('onchange', 'checkCorrect(this.value, this.id)');
+          // get letter from myArray
+          // console.log(myArray[i]);
+          textBox.setAttribute('value', myArray[i]);
+          textBox.setAttribute('disabled', 'disabled');
+          var displayLetter = document.getElementById("letters2move");
+          displayLetter.appendChild(textBox);
+      }
+
       // need to make ul sortable
       // need to check to see if correct once moved
       // need to keep score
+      // remove spelling word object when sorted correctly
       // show winner and score when done
       // need quit function
       // need to make sure can't change li's
-      alert(myArray);
+      // alert(myArray);
 }
 
 /**
