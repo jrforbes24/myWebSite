@@ -321,9 +321,7 @@ function checkCorrect(letter, the_id) {
     }
     // clear boxes and add new word
     populateMLWID();
-
   }
-
 }
 
 
@@ -352,9 +350,6 @@ function mixedUpLetters() {
       // show winner and score when done
       // need quit function
       // need to make sure can't change li's
-
-
-      
       alert(myArray);
 
 
