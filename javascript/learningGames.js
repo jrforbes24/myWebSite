@@ -252,6 +252,7 @@ function populateMLWID() {
 }
 
 
+
 /**
 this will quit the game, which means, hide the div, clear the spelling list and the name
 */
