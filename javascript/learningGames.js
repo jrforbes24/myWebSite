@@ -251,6 +251,7 @@ function populateMLWID() {
     }
 }
 
+
 /**
 this will quit the game, which means, hide the div, clear the spelling list and the name
 */
@@ -351,8 +352,6 @@ function mixedUpLetters() {
       // need quit function
       // need to make sure can't change li's
       alert(myArray);
-
-
 }
 
 /**
