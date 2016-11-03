@@ -350,8 +350,7 @@ function mixedUpLetters() {
       for (var i = 0; i < myArray.length; i++) {
           // console.log(myArray);
           // create a new textbox
-          var textBox = document.createElement("input");
-          textBox.type = 'text';
+          var textBox = document.createElement("li");
           // set max attribute
           textBox.setAttribute('maxLength', '1');
           // set name attribute
@@ -360,13 +359,18 @@ function mixedUpLetters() {
           // TODO textBox.setAttribute('onchange', 'checkCorrect(this.value, this.id)');
           // get letter from myArray
           // console.log(myArray[i]);
-          textBox.setAttribute('value', myArray[i]);
-          textBox.setAttribute('disabled', 'disabled');
+          textBox.innerHTML = myArray[i];
+          textBox.setAttribute('class', 'boxToMove');
           var displayLetter = document.getElementById("letters2move");
           displayLetter.appendChild(textBox);
       }
-
       // need to make ul sortable
+      $("#letters2move").sortable({
+        containment: 'document',
+        tolerance: 'pointer',
+        cursor: 'pointer',
+        revert: true
+      });
       // need to check to see if correct once moved
       // need to keep score
       // remove spelling word object when sorted correctly

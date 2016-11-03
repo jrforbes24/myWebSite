@@ -201,7 +201,7 @@ footer a p:hover {
 	display: none;
 }
 
-#mixupLetters input {
+#mixupLetters .boxToMove {
 	list-style: none;
   display: inline-block;
   margin:5px;
@@ -213,9 +213,7 @@ footer a p:hover {
   max-height: 20px;
 }
 
-input:disabled {
-	color: black;
-}
+
 
 
 .group:after {
