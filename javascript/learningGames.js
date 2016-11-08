@@ -181,12 +181,9 @@ function wordLetterArray() {
 /*
 Clear the childnodes from missLetterWord unordered list
 */
-function removeInputFields() {
-    // while statement to remove any childnodes for missLetterWord
-    var missLetterWords = document.getElementById("missLetterWord");
-
-    while (missLetterWords.hasChildNodes()) {
-        missLetterWords.removeChild(missLetterWords.childNodes[0]);
+function removeInputFields(anId) {
+    while (anId.hasChildNodes()) {
+        anId.removeChild(anId.childNodes[0]);
     }
 }
 
@@ -197,7 +194,9 @@ it to the missLetterWord id. Hopefully one letter per list item.
 */
 function populateMLWID() {
     // this removes and fields that may be there already
-    removeInputFields();
+    // get id of ul to pass to removeInputFields
+    var missLetterWords = document.getElementById("missLetterWord");
+    removeInputFields(missLetterWords);
     // show the id missLetterDiv
     $('#missLetterDiv').show();
     // this creates a randum number based on the length of the spelling list
@@ -250,8 +249,6 @@ function populateMLWID() {
         displayLetter.appendChild(textBox);
     }
 }
-
-
 
 /**
 this will quit the game, which means, hide the div, clear the spelling list and the name
@@ -318,14 +315,12 @@ function checkCorrect(letter, the_id) {
         document.getElementById('missingLetters2').style.display = 'none';
         show_winner(score);
         score = 0;
-        update_score(score);
-
+        // update_score(score);
     }
     // clear boxes and add new word
     populateMLWID();
   }
 }
-
 
 /** missingLetters function containg the code to play the missing letters game
  */
@@ -335,10 +330,19 @@ function missingLetters() {
     populateMLWID();
 }
 
+
+
+
+
+
+/****   code for mixed up letters game   ****/
+
+var randNum2 = Math.floor(Math.random() * spellingListArrays.length);
+
 /*check to see if newely created array is the same as the array2 of object.*/
-function mixedLtrCheck(the_number) {
+function mixedLtrCheck() {
   // take the_number argument and grab the array from usedSpellingListObject
-  var checkArray = spellingListArrays[the_number].array2;
+  var checkArray = spellingListArrays[randNum2].array2;
   // get text from the list items in order create array
   var tempArray2 = $('#letters2move').children().text();
   tempArray2 = tempArray2.split('');
@@ -346,10 +350,44 @@ function mixedLtrCheck(the_number) {
   var isCorrect = checkArray.every(function(element, index){
     return element === tempArray2[index];
   });
-  return isCorrect;
+  if (isCorrect) {
+    var arrayLength = tempArray2.length;
+    update_score(arrayLength);
+    populateMUL();
+
+  } else {
+
+  }
 
 }
 
+/*
+ function to set up the sortable list
+*/
+
+
+function populateMUL() {
+  // first remove the child nodes
+  var theId = document.getElementById('letters2move');
+  removeInputFields(theId);
+  // get the array and shuffle
+  var myArray = spellingListArrays[randNum2].array1;
+  shuffle(myArray);
+  // need to add to li and write to screen
+  for (var i = 0; i < myArray.length; i++) {
+      // create a new textbox
+      var textBox = document.createElement("li");
+      // set max attribute
+      textBox.setAttribute('maxLength', '1');
+      // set name attribute
+      textBox.setAttribute('id', 'spellbox' + i);
+      // get letter from myArray
+      textBox.innerHTML = myArray[i];
+      textBox.setAttribute('class', 'boxToMove');
+      var displayLetter = document.getElementById("letters2move");
+      displayLetter.appendChild(textBox);
+  }
+}
 
 /**
  *  This will run the mixed up letters game.
@@ -359,23 +397,8 @@ function mixedUpLetters() {
       // function to add word objects to arrays
       wordLetterArray();
       // need to shuffle a speling word array objects
-      var randNum2 = Math.floor(Math.random() * spellingListArrays.length);
-      var myArray = spellingListArrays[randNum2].array1;
-      shuffle(myArray);
-      // need to add to li and write to screen
-      for (var i = 0; i < myArray.length; i++) {
-          // create a new textbox
-          var textBox = document.createElement("li");
-          // set max attribute
-          textBox.setAttribute('maxLength', '1');
-          // set name attribute
-          textBox.setAttribute('id', 'spellbox' + i);
-          // get letter from myArray
-          textBox.innerHTML = myArray[i];
-          textBox.setAttribute('class', 'boxToMove');
-          var displayLetter = document.getElementById("letters2move");
-          displayLetter.appendChild(textBox);
-      }
+
+      populateMUL(randNum2);
       // need to make ul sortable
       $("#letters2move").sortable({
         containment: 'document',
