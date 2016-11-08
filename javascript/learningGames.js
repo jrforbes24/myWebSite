@@ -335,6 +335,22 @@ function missingLetters() {
     populateMLWID();
 }
 
+/*check to see if newely created array is the same as the array2 of object.*/
+function mixedLtrCheck(the_number) {
+  // take the_number argument and grab the array from usedSpellingListObject
+  var checkArray = spellingListArrays[the_number].array2;
+  // get text from the list items in order create array
+  var tempArray2 = $('#letters2move').children().text();
+  tempArray2 = tempArray2.split('');
+  // check to see if arrays match.
+  var isCorrect = checkArray.every(function(element, index){
+    return element === tempArray2[index];
+  });
+  return isCorrect;
+
+}
+
+
 /**
  *  This will run the mixed up letters game.
  *
@@ -348,17 +364,13 @@ function mixedUpLetters() {
       shuffle(myArray);
       // need to add to li and write to screen
       for (var i = 0; i < myArray.length; i++) {
-          // console.log(myArray);
           // create a new textbox
           var textBox = document.createElement("li");
           // set max attribute
           textBox.setAttribute('maxLength', '1');
           // set name attribute
           textBox.setAttribute('id', 'spellbox' + i);
-          // set event
-          // TODO textBox.setAttribute('onchange', 'checkCorrect(this.value, this.id)');
           // get letter from myArray
-          // console.log(myArray[i]);
           textBox.innerHTML = myArray[i];
           textBox.setAttribute('class', 'boxToMove');
           var displayLetter = document.getElementById("letters2move");
@@ -372,6 +384,9 @@ function mixedUpLetters() {
         revert: true
       });
       // need to check to see if correct once moved
+      $("#letters2move").on( "sortstop", function() {
+        mixedLtrCheck(randNum2);
+      });
       // need to keep score
       // remove spelling word object when sorted correctly
       // show winner and score when done
