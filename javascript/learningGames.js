@@ -255,7 +255,8 @@ this will quit the game, which means, hide the div, clear the spelling list and 
 */
 $('.quit').click(function() {
     clearSpellList();
-    removeInputFields();
+    var toRemove = $(this).prev();
+    removeInputFields(toRemove);
     $(this).parent().hide();
     score = 0;
     update_score(score);
