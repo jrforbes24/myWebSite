@@ -182,10 +182,9 @@ function wordLetterArray() {
 Clear the childnodes from missLetterWord unordered list
 */
 function removeInputFields(anId) {
-    while (anId.hasChildNodes()) {
-        anId.removeChild(anId.childNodes[0]);
+        $(anId).contents().remove();        
     }
-}
+
 
 
 /*
@@ -254,9 +253,12 @@ function populateMLWID() {
 this will quit the game, which means, hide the div, clear the spelling list and the name
 */
 $('.quit').click(function() {
-    clearSpellList();
     var toRemove = $(this).prev();
+
     removeInputFields(toRemove);
+
+
+    clearSpellList();
     $(this).parent().hide();
     score = 0;
     update_score(score);
