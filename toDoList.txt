@@ -1,4 +1,10 @@
 Things to do next list
-- Mixed up letters 
+- Mixed up letters
+  -  need to keep score
+  // remove spelling word object when sorted correctly
+  // show winner and score when done
+  // need quit function
+  // need to make sure can't change li's
+  // alert(myArray);
 - lock web page with security or sign on system // I can do this with s3 when I am ready
 - set up logging on that // s3 also

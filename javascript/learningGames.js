@@ -182,7 +182,7 @@ function wordLetterArray() {
 Clear the childnodes from missLetterWord unordered list
 */
 function removeInputFields(anId) {
-        $(anId).contents().remove();        
+        $(anId).contents().remove();
     }
 
 
@@ -340,12 +340,12 @@ function missingLetters() {
 
 /****   code for mixed up letters game   ****/
 
-var randNum2 = Math.floor(Math.random() * spellingListArrays.length);
+// var randNum2 = Math.floor(Math.random() * spellingListArrays.length);
 
 /*check to see if newely created array is the same as the array2 of object.*/
-function mixedLtrCheck() {
+function mixedLtrCheck(anNumber) {
   // take the_number argument and grab the array from usedSpellingListObject
-  var checkArray = spellingListArrays[randNum2].array2;
+  var checkArray = spellingListArrays[anNumber].array2;
   // get text from the list items in order create array
   var tempArray2 = $('#letters2move').children().text();
   tempArray2 = tempArray2.split('');
@@ -369,12 +369,12 @@ function mixedLtrCheck() {
 */
 
 
-function populateMUL() {
+function populateMUL(aNumber) {
   // first remove the child nodes
   var theId = document.getElementById('letters2move');
   removeInputFields(theId);
   // get the array and shuffle
-  var myArray = spellingListArrays[randNum2].array1;
+  var myArray = spellingListArrays[aNumber].array1;
   shuffle(myArray);
   // need to add to li and write to screen
   for (var i = 0; i < myArray.length; i++) {
@@ -400,7 +400,7 @@ function mixedUpLetters() {
       // function to add word objects to arrays
       wordLetterArray();
       // need to shuffle a speling word array objects
-
+      var randNum2 = Math.floor(Math.random() * spellingListArrays.length);
       populateMUL(randNum2);
       // need to make ul sortable
       $("#letters2move").sortable({
