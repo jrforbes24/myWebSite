@@ -356,7 +356,9 @@ function mixedLtrCheck(anNumber) {
   if (isCorrect) {
     var arrayLength = tempArray2.length;
     update_score(arrayLength);
-    populateMUL();
+    spellingListArrays.splice(randNum2, 1);
+    setRandomNumber2();
+    populateMUL(randNum2);
 
   } else {
 
@@ -391,7 +393,10 @@ function populateMUL(aNumber) {
       displayLetter.appendChild(textBox);
   }
 }
-
+var randNum2;
+function setRandomNumber2(){
+  randNum2 = Math.floor(Math.random() * spellingListArrays.length);
+}
 /**
  *  This will run the mixed up letters game.
  *
@@ -400,7 +405,7 @@ function mixedUpLetters() {
       // function to add word objects to arrays
       wordLetterArray();
       // need to shuffle a speling word array objects
-      var randNum2 = Math.floor(Math.random() * spellingListArrays.length);
+      setRandomNumber2();
       populateMUL(randNum2);
       // need to make ul sortable
       $("#letters2move").sortable({

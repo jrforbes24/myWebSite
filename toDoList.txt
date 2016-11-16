@@ -1,7 +1,6 @@
 Things to do next list
 - Mixed up letters
-  -  need to keep score
-  // remove spelling word object when sorted correctly
+  // test spellingListArrays for lenght end game if 0
   // show winner and score when done
   // need quit function
   // need to make sure can't change li's
