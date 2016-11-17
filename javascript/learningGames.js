@@ -254,10 +254,7 @@ this will quit the game, which means, hide the div, clear the spelling list and 
 */
 $('.quit').click(function() {
     var toRemove = $(this).prev();
-
     removeInputFields(toRemove);
-
-
     clearSpellList();
     $(this).parent().hide();
     score = 0;
@@ -355,12 +352,26 @@ function mixedLtrCheck(anNumber) {
   });
   if (isCorrect) {
     var arrayLength = tempArray2.length;
-    update_score(arrayLength);
+    score += arrayLength;
+    update_score(score);
     spellingListArrays.splice(randNum2, 1);
-    setRandomNumber2();
-    populateMUL(randNum2);
+    // test to see if game is over by testing if there are still values in the array
+    if (spellingListArrays.length) {
+      // get a new random number
+      setRandomNumber2();
+      // set the next word up
+      populateMUL(randNum2);
+    }
+    else {
+      // end the game show the winner animation
 
-  } else {
+      clearSpellList();
+      removeInputFields();
+      document.getElementById('mixupLetters').style.display = 'none';
+      show_winner(score);
+      score = 0;
+    }
+
 
   }
 
@@ -418,12 +429,10 @@ function mixedUpLetters() {
       $("#letters2move").on( "sortstop", function() {
         mixedLtrCheck(randNum2);
       });
-      // need to keep score
-      // remove spelling word object when sorted correctly
+
       // show winner and score when done
-      // need quit function
-      // need to make sure can't change li's
-      // alert(myArray);
+
+
 }
 
 /**
