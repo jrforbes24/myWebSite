@@ -22,7 +22,6 @@ function getMyLocation() {
 /*
 Creating a lightbox for the gallery page
 */
-
 // first the variables for the html
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img>');
