@@ -119,15 +119,13 @@ footer a p:hover {
 .theSpellingList  {
 	float: right;
 	padding: 25px;
-	background-color: #000000;
+	background-color: #95A195;
 	color: #000000;
 	display: block;
 	margin: 20px;
 }
 
-.theSpellingList:hover {
-	background-color: #95A195;
-}
+/
 
 .theSpellingList h3 {
   background-color: #95A195;
@@ -135,7 +133,7 @@ footer a p:hover {
 }
 
 #listSpelling1 {
-	list-style: none;
+		list-style: none;
     background-color: #000000;
     background-image: none;
 }
@@ -145,10 +143,7 @@ footer a p:hover {
   background-image: none;
 }
 
-#listSpelling1 li {
-	background-color: transparent;
-	display: block;
-}
+
 
 #2 {
 	display: none;
@@ -177,8 +172,14 @@ footer a p:hover {
 }
 
 #listSpelling2 {
-	background-color: inherit;
 	list-style: none;
+	background-color: #000000;
+	background-image: none;
+}
+
+#listSpelling2:hover {
+	background-color: #95A195;
+  background-image: none;
 }
 
 #missLetterWord {
