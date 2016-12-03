@@ -1,5 +1,5 @@
 Things to do next list
-- fix color on spellingList hover
+
 - add media compatibility
 
 
