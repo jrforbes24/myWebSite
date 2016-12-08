@@ -297,3 +297,32 @@ footer a p:hover {
 	font-size: 0.5em;
 	text-shadow: none;
 }
+
+
+/* Start of media queries and formatting*/
+
+@media all and (orientation: portrait) {
+	#leftColumn{
+		display: none;
+		position: relative;
+		clear: both;
+		width: auto;
+	  height: auto;
+		float: none;
+		margin: 10px 25px;
+		background-image:linear-gradient(to left, #95A195, #BBC9BB );
+		padding:15px;
+	    box-shadow: 5px 5px 10px;
+	}
+
+	#jrfblog {
+		clear:none;
+		margin-top: 10%;
+		margin-left: 2%;
+		padding-left: 2%;
+
+	}
+
+
+
+}
