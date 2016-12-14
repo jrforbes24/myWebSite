@@ -324,22 +324,29 @@ footer a p:hover {
 
 	#menu {
 		 background-image:linear-gradient(to left, #95A195, #95A195 );
-		 float:right;
-		 text-align: right;
+		 float:none;
+		 text-align: center;
 		box-shadow: 5px 5px 20px;
 		margin: 10px;
+		line-height: 2.0em;
+		font-size: 1.5em;
 	}
 
 	#menu ul{
 	  display: inline;
-		background-image:linear-gradient(to left, #95A195, #95A195 );	
+		background-image:linear-gradient(to left, #95A195, #95A195 );
 
 
 	 }
 	#menu li {
 	 display:inline;
-	 margin-left:60px;
+	 margin-left:20px;
 	 margin-right:20px;
+	 padding: 2%;
+	 }
+
+	 #menu a.selected {
+		 font-size: 2.5em;
 	 }
 
 
