@@ -320,8 +320,27 @@ footer a p:hover {
 		margin-top: 10%;
 		margin-left: 2%;
 		padding-left: 2%;
-
 	}
+
+	#menu {
+		 background-image:linear-gradient(to left, #95A195, #95A195 );
+		 float:right;
+		 text-align: right;
+		box-shadow: 5px 5px 20px;
+		margin: 10px;
+	}
+
+	#menu ul{
+	  display: inline;
+		background-image:linear-gradient(to left, #95A195, #95A195 );	
+
+
+	 }
+	#menu li {
+	 display:inline;
+	 margin-left:60px;
+	 margin-right:20px;
+	 }
 
 
 
