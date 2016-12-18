@@ -1,5 +1,5 @@
 Things to do next list
-- make function to print out all images in the image folder to gallery
+- make function to print out all images in the image folder to gallery need nodejs
 Need to complete nodejs course
 - lock web page with security or sign on system // I can do this with s3 when I am ready
 - set up logging on that // s3 also

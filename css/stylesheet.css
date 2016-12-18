@@ -7,8 +7,8 @@ body {
 	background-image: linear-gradient(to bottom,#D1C8A9,transparent);
 	background-repeat: no-repeat;
     background-size: 100%;
-
 }
+
 button {
 	/* basics */
 	color: #ffffff;
@@ -72,15 +72,13 @@ a:active, a:hover {
 #menu ul{
  	display: inline;
     background-image:linear-gradient(to left, #95A195, #BBC9BB );
-
-
  	}
+
 #menu li {
 	display:inline;
 	margin-left:60px;
 	margin-right:20px;
 	}
-
 
 #leftColumn{
 	position: relative;
@@ -91,7 +89,6 @@ a:active, a:hover {
 	background-image:linear-gradient(to left, #95A195, #BBC9BB );
 	padding:15px;
     box-shadow: 5px 5px 10px;
-
 }
 
 #main {
@@ -125,7 +122,6 @@ footer a p:hover {
 	margin: 20px;
 }
 
-/
 
 .theSpellingList h3 {
   background-color: #95A195;
@@ -142,8 +138,6 @@ footer a p:hover {
   background-color: #95A195;
   background-image: none;
 }
-
-
 
 #2 {
 	display: none;
@@ -214,9 +208,6 @@ footer a p:hover {
   max-height: 20px;
 }
 
-
-
-
 .group:after {
   content: "";
   display: table;
@@ -227,7 +218,6 @@ footer a p:hover {
   display: none;
 }
 
-
 #spellTitle {
   padding: 10px;
 }
@@ -237,7 +227,6 @@ footer a p:hover {
   display: inline-block;
   margin: 15px;
   padding: 5px;
-
 }
 
 #overlay {
@@ -277,7 +266,6 @@ footer a p:hover {
 	margin-top: 10%;
 	margin-left: 20%;
 	padding-left: 20%;
-
 }
 
 .blogTitle {
@@ -335,9 +323,8 @@ footer a p:hover {
 	#menu ul{
 	  display: inline;
 		background-image:linear-gradient(to left, #95A195, #95A195 );
-
-
 	 }
+
 	#menu li {
 	 display:inline;
 	 margin-left:20px;
@@ -348,7 +335,5 @@ footer a p:hover {
 	 #menu a.selected {
 		 font-size: 2.0em;
 	 }
-
-
 
 }
