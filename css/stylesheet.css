@@ -67,11 +67,14 @@ a:active, a:hover {
  	text-align: right;
     box-shadow: 5px 5px 20px;
     margin: 10px;
+		padding-top: 2%;
+		padding-bottom: 0.25%;
  }
 
 #menu ul{
  	display: inline;
     background-image:linear-gradient(to left, #95A195, #BBC9BB );
+		font-size: 1.5em ;
  	}
 
 #menu li {
