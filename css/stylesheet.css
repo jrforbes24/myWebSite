@@ -290,9 +290,12 @@ footer a p:hover {
 }
 
 
+
+
 /* Start of media queries and formatting*/
 
 @media all and (orientation: portrait) {
+
 	#leftColumn{
 		display: none;
 		position: relative;
