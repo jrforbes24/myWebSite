@@ -37,6 +37,11 @@ li {
 	text-align: right;
 }
 
+#main-page {
+	clear: right;
+	margin-top: 10%;
+}
+
 a:link, a:visited {
 	 color:#375C1C;
 	 text-decoration: none;
