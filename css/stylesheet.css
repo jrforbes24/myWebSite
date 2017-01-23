@@ -40,6 +40,9 @@ li {
 #main-page {
 	clear: right;
 	margin-top: 10%;
+	margin-left: 20%;
+	padding-left: 10%;
+
 }
 
 a:link, a:visited {
