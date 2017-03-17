@@ -6,7 +6,7 @@ function displayLocation(position) {
     var div = document.getElementById("location");
     div.innerHTML = "You are at latitude "+ latitude + ", longitude"+ longitude;
    }
-
+ 
 
 function getMyLocation() {
     if (navigator.geolocation) {
